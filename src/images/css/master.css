@@ -1,0 +1,125 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+ 
+/* Styles */
+body {
+    background: linear-gradient(180grad, #48564c, #708275);
+    color: #fff9;
+    font-family: Poppins;
+    min-height: 100dvh;
+ 
+    main {
+        background: linear-gradient(to bottom, #0009, #0000);
+        border-radius: 0.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        margin: 1.4rem auto;
+        width: 380px;
+ 
+        header.mmenu {
+            text-align: center;
+ 
+            h1 {
+                font-size: 3rem;
+                font-weight: 200;
+                border-bottom: 2px solid #fff9;
+                margin: 0;
+            }
+            h2 {
+                font-size: 1.2rem;
+                font-weight: 500;
+                margin: 0;
+            }
+            img {
+                margin: 2rem auto;
+                border: 4px solid #fff3;
+                border-radius: 50%;
+                object-fit: cover;
+                height: 280px;
+                width: 280px;
+            }
+            h3 {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin: 0;
+            }
+            h4 {
+                font-size: 0.94rem;
+                font-weight: 200;
+                margin: 0;
+            }
+            h5 {
+                font-size: 1rem;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+ 
+        menu.mmenu {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 0;
+            margin: 2rem auto;
+            gap: 0.6rem;
+            justify-content: center;
+            
+            a:is(:link, :visited) {
+                background-color: #0009;
+                border-radius: 5rem;
+                text-decoration: none;
+                color: #fff9;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding: 0.6rem;
+                transition: all 0.4s ease-in;
+                width: 280px;
+ 
+                &:is(:hover) {
+                    background-color: #738678;
+                    color: #0009;
+                    transform: scale(1.05) translateX(16px);
+ 
+                    span {
+                        background-color: #0009;
+                        color: #fff9;
+                    }
+                }
+ 
+                span {
+                    align-items: center;
+                    display: flex;
+                    font-size: 1.8rem;
+                    border-radius: 50%;
+                    background-color: #738678;
+                    color: #0009;
+                    justify-content: center;
+                    height: 60px;
+                    transition: all 0.8s ease-out;
+                    width: 60px;
+                }
+ 
+                aside {
+                    display: flex;
+                    justify-content: center;
+                    margin-left: 0.6rem;
+                    flex-direction: column;
+                    align-items: start;
+                    h4 {
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        margin: 0;
+                    }
+                    small {
+                        font-size: 0.6rem;
+                        color: #fff4;
+                    }
+                }
+            }
+        }
+    }
+}
