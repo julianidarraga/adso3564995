@@ -1,13 +1,49 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
- 
+
 /* Styles */
 body {
-    background: linear-gradient(180grad, #48564c, #708275);
-    color: #fff9;
+    background: linear-gradient(to top, #738678, #2c332e);
+    color: #eddcb9aa;
+    background-attachment: fixed;
     font-family: Poppins;
     min-height: 100dvh;
- 
+
+    &.emmet {
+        background: linear-gradient(to top, #7acb16, #192a05);
+        color: #baffa9aa;
+
+        main {
+            header.mmenu {
+                h1 {
+                    border-bottom: 2px solid #baffa9aa;
+                }
+                img {
+                    border: 4px solid #baffa933;
+                }
+            }
+        }
+    }
+
+    nav.goback {
+        align-items: center;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        left: 6px;
+        opacity: .6;
+        position: fixed;
+        top: 6px;
+        transition: all 0.4s ease-in;
+        width: 40px;
+        &:hover {
+            opacity: .9;
+            transform: scale(1.1);
+        }
+    }
+
     main {
         background: linear-gradient(to bottom, #0009, #0000);
         border-radius: 0.6rem;
@@ -18,14 +54,14 @@ body {
         padding: 1rem;
         margin: 1.4rem auto;
         width: 380px;
- 
+
         header.mmenu {
             text-align: center;
- 
+
             h1 {
                 font-size: 3rem;
                 font-weight: 200;
-                border-bottom: 2px solid #fff9;
+                border-bottom: 2px solid #eddcb9aa;
                 margin: 0;
             }
             h2 {
@@ -35,7 +71,7 @@ body {
             }
             img {
                 margin: 2rem auto;
-                border: 4px solid #fff3;
+                border: 4px solid #eddcb933;
                 border-radius: 50%;
                 object-fit: cover;
                 height: 280px;
@@ -57,7 +93,7 @@ body {
                 margin: 0;
             }
         }
- 
+
         menu.mmenu {
             display: flex;
             align-items: center;
@@ -71,25 +107,31 @@ body {
                 background-color: #0009;
                 border-radius: 5rem;
                 text-decoration: none;
-                color: #fff9;
+                color: #eddcb9aa;
                 display: flex;
                 justify-content: start;
                 align-items: center;
                 padding: 0.6rem;
                 transition: all 0.4s ease-in;
                 width: 280px;
- 
+
                 &:is(:hover) {
                     background-color: #738678;
                     color: #0009;
                     transform: scale(1.05) translateX(16px);
- 
+
                     span {
                         background-color: #0009;
                         color: #fff9;
                     }
+
+                    aside {
+                        small {
+                            color: #0004;
+                        }
+                    }
                 }
- 
+
                 span {
                     align-items: center;
                     display: flex;
@@ -102,7 +144,7 @@ body {
                     transition: all 0.8s ease-out;
                     width: 60px;
                 }
- 
+
                 aside {
                     display: flex;
                     justify-content: center;
@@ -116,9 +158,9 @@ body {
                     }
                     small {
                         font-size: 0.6rem;
-                        color: #fff4;
+                        color: #eddcb944;
                     }
-                }
+                } 
             }
         }
     }
