@@ -22,6 +22,46 @@ body {
                     border: 4px solid #baffa933;
                 }
             }
+            section {
+                h2.subtitle {
+                    align-items: center;
+                    background-color: #7acb16;
+                    border-radius: 8px;
+                    color: #0009;
+                    display: flex;
+                    font-weight: 500;
+                    justify-content: space-between;
+                    margin: 0;
+                    padding: 0.4rem;
+                    span {
+                        align-items: center;
+                        background-color: #0009;
+                        border-radius: 50%;
+                        color: #fffc;
+                        display: flex;
+                        height: 30px;
+                        justify-content: center;
+                        width: 30px;
+                    }
+                }
+                small {
+                    color: #fff9;
+                }
+                h3 {
+                    margin: 0;
+                    border-bottom: 1px dotted #baffa9aa;
+                }
+                p {
+                    color: #fff9;
+                    font-size: 1.2rem;
+                }
+                xmp {
+                    background-color: #0009;
+                    border-radius: 8px;
+                    color: #fffc;
+                    padding: 0.4rem;
+                }
+            }
         }
     }
 
@@ -92,6 +132,14 @@ body {
                 font-weight: 400;
                 margin: 0;
             }
+        }
+
+        section {
+            background-color: #0009;
+            border-radius: 8px;
+            padding: 0.6rem;
+            margin: 1rem auto;
+            width: 360px;
         }
 
         menu.mmenu {

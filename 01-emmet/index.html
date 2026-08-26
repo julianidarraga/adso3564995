@@ -19,6 +19,254 @@
                 <h2>Plugin for faster HTML and CSS coding </h2>
                 <img src="../src/images/logo-emmet.svg" alt="Emmet">
             </header> 
-        </main>
-    </body>
+               <section>
+        <h2 class= "subtitle">
+         01-Child
+         <span>></span>
+        </h2>
+        <small>Creates Child elemts (nesting).</small>
+        <h3>Example:</h3>
+        <p>ul>li>a ↔️</p>
+        <h3>Result:</h3>
+<xmp><ul>
+    <li>
+        <a href=""></a>
+    </li>
+</ul></xmp>
+           </section>
+
+           <section>
+        <h2 class= "subtitle">
+         02-Sibling
+         <span> + </span>
+        </h2>
+        <small>Creates sibling elements.</small>
+        <h3>Example:</h3>
+        <p>header*section*footer ↔️</p>
+        <h3>Result:</h3>
+<xmp><header></header>
+<section></section>
+<footer></footer></xmp>
+           </section>
+
+           <section>
+            <h2 class="subtitle">
+                03-Multiplication
+                <span> * </span>
+            </h2>
+            <small>Respects elemnts multiple times.</small>
+            <h3>Example:</h3>
+            <p><ul>li*3  ↔️</ul></p>
+            <h3>Result</h3>
+<xmp>><ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul></xmp>
+           </section>
+
+           <section>
+<h2 class= "subtitle">
+    04-Class
+    <span> . </span>
+    <h2>
+        <small>Create a class atribute.</small>
+        <h3>Example</h3>
+        <p>div.Important ↔️</p>
+        <p>danger ↔️</p>
+        <h3>Result</h3>
+<xmp><div>class="Important"</div>
+    <div class "danger"></div></xmp>
+           </section>
+
+           <section>
+            <h2 class= "subtitle">
+                05-Classes
+                <span> ... </span>
+            </h2>
+                <small>Creates multiple class attributes</small>
+                <h3>Example:</h3>
+                <p>div.clase1.clase2.clasen ↔️</p>
+                <h3>Result:</h3>
+<xmp><div class=red green blue">  </div></xmp>
+           </section> 
+
+                <section>
+                <h2 class= "subtitle">
+                    06-Identification
+                    <span> # </span>
+                    </h2>
+                    <small>Creates an ID atrribute.</small>
+                    <h3>Example</h3>
+                    <p>menu#cod123 ↔️</p>
+                    <h3>Result:</h3>
+<xmp><menu id= "cod123"></menu>  </div></xmp> 
+           </section>
+
+           <section>
+                <h2 class="subtitle">
+                    07-Text
+                    <span> {} </span>
+                </h2>
+                <small>Insert text content.</small>
+                <h3>Examples:</h3>
+                <p>p{lorem ipsum dolor} ↔️</p>
+                <p>a{click here} ↔️</p>
+                <h3>Result:</h3>
+<xmp><p>lorem ipsum dolor</p>
+<a href="">click here</a></xmp>
+            </section>
+
+            <section>
+                <h2 class="subtitle">
+                    08-Custom attributes
+                    <span> [] </span>
+                </h2>
+                <small>Creates custom attributes.</small>
+                <h3>Example:</h3>
+                <p>input[type=number] ↔️</p>
+                <h3>Result:</h3>
+<xmp><input type="number"> </xmp>
+            </section>
+
+            <section>
+                <h2 class="subtitle">
+                    09-Item Numbering
+                    <span> $ </span>
+                </h2>
+                <small>Adds consecutive numbers.</small>
+                <h3>Examples:</h3>
+                <p>ul>li.num$*3 ↔️</p>
+                <p>section>article.sec$$$*3 ↔️</p>
+                <h3>Result:</h3>
+<xmp><ul>
+    <li class="num1"></li>
+    <li class="num2"></li>
+    <li class="num3"></li>
+</ul> </xmp>
+            </section>
+
+            <section>
+                <h2 class="subtitle">
+                    10-Reverse Numbering
+                    <span> @- </span>
+                </h2>
+                <small>Inverts numbering order.</small>
+                <h3>Example:</h3>
+                <p>ul>li.num$@-*3 ↔️</p>
+                <h3>Result:</h3>
+<xmp><ul>
+    <li class="num3"></li>
+    <li class="num2"></li>
+    <li class="num1"></li>
+</ul> </xmp>
+            </section>
+
+            <section>
+                <h2 class="subtitle">
+                    11-Base Numbering
+                    <span> @n </span>
+                </h2>
+                <small>Defines a base number for sequences.</small>
+                <h3>Example:</h3>
+                <p>ul>li.num$@3*4 ↔️</p>
+                <h3>Result:</h3>
+<xmp><ul>
+    <li class="num3"></li>
+    <li class="num4"></li>
+    <li class="num5"></li>
+    <li class="num6"></li>
+</ul> </xmp>
+            </section>
+
+            <section>
+                <h2 class="subtitle">
+                    12-Climb Up
+                    <span> ^ </span>
+                </h2>
+                <small>Moves up one level.</small>
+                <h3>Example:</h3>
+                <p>section>article>div^p ↔️</p>
+                <h3>Result:</h3>
+<xmp><section>
+    <article>
+        <div></div>
+    </article>
+    <p></p>
+</section> </xmp>
+            </section>
+
+            <section>
+                <h2 class="subtitle">
+                    13-Grouping
+                    <span> () </span>
+                </h2>
+                <small>Groups elements together.</small>
+                <h3>Example:</h3>
+                <p>(header>nav)(section>article) ↔️</p>
+                <h3>Result:</h3>
+<xmp><header>
+<nav></nav>
+</header>
+<section>
+<article></article></xmp>
+            </section>
+
+            <section>
+                <h2 class="subtitle">
+                    14-Lorem
+                     <span> lorem </span>
+                </h2>
+                <small>Generates placeholder text.</small>
+                <h3>Examples:</h3>
+                <p>lorem ↔️</p>
+                <p>lorem20 ↔️</p>
+                <p>lorem*5 ↔️</p>
+                <h3>Result:</h3>
+<xmp>Lorem ipsum dolor</xmp>
+            </section>
+
+            <section>
+                <h2 class="subtitle">
+                    15-HTML Documents
+                     <span> html: </span>
+                </h2>
+                <small>Creates various HTML document types.</small>
+                <h3>Example:</h3>
+                <p>html:xs —— Documento xhtml 1.0 Strict ↔️</p>
+                <p>html:xt —— Documento xhtml 1.0 Transitional ↔️</p>
+                <p>html:4s —— Documento html 4.01 Strict ↔️</p>
+                <p>html:4t —— Documento html 4.01 Transitional ↔️</p>
+                <p>html:5 —— Documento html 5 ↔️</p>
+                <h3>Result:</h3>
+<xmp><html:xs></html:xs>
+<html:xt></html:xt>
+<html:4s></html:4s>
+<html:4t></html:4t></xmp>
+            </section>
+
+            <section>
+                <h2 class="subtitle">
+                    16-Meta Tags
+                     <span> meta: </span>
+                </h2>
+                <small>Generates meta tags.</small>
+                <h3>Example:</h3>
+                <p>meta:vp ↔️</p>
+                <h3>Result:</h3>
+<xmp><meta name="viewport" content="width=device-width, 
+initial-scale=1.0"> </xmp>
+            </section>
+
+            <section>
+                <h2 class="subtitle">
+                    17-Challenge
+                </h2>
+                <small>Generates Emmet challenges for practice.</small>
+                
+            </section>
+
+    </main>
+
+</body>
 </html>
