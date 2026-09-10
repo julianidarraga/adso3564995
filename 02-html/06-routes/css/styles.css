@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+body {
+    background-color: #ccc;
+    color: #333;
+    display: flex;
+    font-family: Poppins;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+main {
+    background-color: #fff;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 80%;
+
+    header {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        width: 100%;
+
+        a:is(:link, :visited) {
+            background-color: #ccc;
+            color: #333;
+            font-size: 1.2rem;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.4s ease-in;
+            width: 20%;
+        }
+        a:is(:hover),
+        a.active {
+            background-color: #333;
+            color: #ccc;
+        }
+    }
+
+    section {
+        h1 {
+            font-size: 2.6rem;
+            text-align: center;
+        }
+        img {
+            object-fit: contain;
+            height: 400px;
+            width: 100%;
+        }
+        p {
+            text-align: justify;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+   main {
+       header {
+           flex-direction: column;
+           gap: 0.5rem;
+           a:is(:link, :visited) {
+               display: flex;
+               justify-content: center;
+               width: 98% !important;
+           }
+       }
+   } 
+}

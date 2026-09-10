@@ -1,16 +1,57 @@
-/* Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
-/* Styles */
+
 body {
     background: linear-gradient(to top, #738678, #2c332e);
-    color: #eddcb9aa;
     background-attachment: fixed;
+    color: #eddcb9aa;
     font-family: Poppins;
     min-height: 100dvh;
 
+    &.html {
+        background: linear-gradient(to top, #e44d26, #1f0a05);
+        background-attachment: fixed;
+        color: #f9966baa;
+        main {
+            header.mmenu {
+                h1 {
+                    border-bottom: 2px solid #f9966baa;
+                }
+                img {
+                    border: 4px solid #f9966baa;
+                }
+            }
+           menu.mmenu {
+                a:is(:link, :visited) {
+                    &:hover {
+                        background-color: #e44d26;
+                        aside {
+                            h4 {
+                                color: #fff9;
+                            }
+                        }
+                    }
+                    span {
+                        background-color: #e44d26;
+                        height: 50px;
+                        font-size: 1.4rem;
+                        width: 50px;
+                        color: #fff9;
+                    }
+                    aside {
+                        h4 {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+           } 
+        }
+    }
+
     &.emmet {
         background: linear-gradient(to top, #7acb16, #192a05);
+        background-attachment: fixed;
         color: #baffa9aa;
 
         main {
@@ -36,6 +77,7 @@ body {
                     span {
                         align-items: center;
                         background-color: #0009;
+                        font-size: 0.8rem;
                         border-radius: 50%;
                         color: #fffc;
                         display: flex;
@@ -98,6 +140,13 @@ body {
         header.mmenu {
             text-align: center;
 
+             &.internal {
+                h1 { font-size: 2rem; }
+                img {
+                    height: 80px;
+                    width: 80px;
+                 }
+            }
             h1 {
                 font-size: 3rem;
                 font-weight: 200;
