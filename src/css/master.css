@@ -3,9 +3,9 @@
 
 
 body {
-    background: linear-gradient(to top, #738678, #2c332e);
+    background: linear-gradient(to top, #082aea, #15d84cc9);
     background-attachment: fixed;
-    color: #eddcb9aa;
+    color: #13e6b8aa;
     font-family: Poppins;
     min-height: 100dvh;
 
@@ -234,7 +234,7 @@ body {
                     display: flex;
                     font-size: 1.8rem;
                     border-radius: 50%;
-                    background-color: #738678;
+                    background-color: #22b0df;
                     color: #0009;
                     justify-content: center;
                     height: 60px;

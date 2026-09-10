@@ -1,5 +1,5 @@
 # ADSO 3564995
-![profile picture](src/images/pngtree-boy-relax-at-home-playing-video-games-reality-gadget-person-vector-png-image_12882436.png)
+![profile picture](src/images/WhatsApp%20Image%202026-09-09%20at%208.49.52%20PM.jpeg)
 ## Julian Idarraga Arias
 ### Analisis y Desarrollo De Software
 ***centro de procesos industriales y de construcccion***
