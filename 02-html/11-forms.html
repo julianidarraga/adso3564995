@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11-forms</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        div.block {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            div.input {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                h4 {
+                    margin: 0;
+                    border-bottom: none;
+                    font-size: 0.8rem;
+                    font-weight: 400;
+                    width: 90px;
+                }
+            }
+        }
+        section {
+            input, select, textarea, button {
+                padding: 0.2rem;
+
+            }
+            input[type=button],
+            input[type=submit],
+            input[type=reset] {
+                padding: 0.4rem;
+            }
+            div.menu {
+                width: fit-content;
+                margin: 10px auto;
+                a:is(:link, :visited) {
+                    background-color: #0004;
+                    color: #fff;
+                    padding: 8px;
+                    text-decoration: none;
+                    transition: all 0.4s ease-in;
+                }
+                a:is(:hover, :active) {
+                    background-color: #0009;
+                }
+                a:first-child {
+                    border-radius: 20px 0 0 20px;
+                }
+                a:last-child {
+                    border-radius: 0 20px 20px 0;
+                }
+            }
+            div#elements,
+            div#example {
+                display: none;
+            }
+            #elements:target,
+            #example:target {
+                display: block;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            label {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        fieldset {
+            border: 2px solid #fff9;
+            border-radius: 4px;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body class="html">
+    <nav class="goback">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256">
+                <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+            </svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mmenu internal">
+            <h1>11-forms</h1>
+            <img src="../src/images/logo-html.png" alt="Html">
+            <h3>Description</h3>
+        </header>
+        <section>
+            <div class="menu">
+                <a href="#elements">Elements</a>
+                <a href="#example">Example</a>
+            </div>
+            <div id="elements">
+                <h3>Inputs</h3>
+                <div class="block">
+                    <div class="input">
+                        <h4>Text:</h4>
+                        <input type="text">
+                    </div>
+                    <div class="input">
+                        <h4>Password:</h4>
+                        <input id="passw" type="password">
+                        <button id="toggle-option">show</button>
+                    </div>
+                    <div class="input">
+                        <h4>Number:</h4>
+                        <input type="number">
+                    </div>
+                    <div class="input">
+                        <h4>Range:</h4>
+                        <input type="range" value="0" min="0" max="100" step="25" oninput="per.value=this.value+'%'">
+                        <output id="per">0%</output>
+                    </div>
+                    <div class="input">
+                        <h4>Color:</h4>
+                        <input type="color" oninput="ccolor.value=this.value">
+                        <output id="ccolor"></output>
+                    </div>
+                    <div class="input">
+                        <h4>Date:</h4>
+                        <input type="date">
+                    </div>
+                    <div class="input">
+                        <h4>Time:</h4>
+                        <input type="time">
+                    </div>
+                    <div class="input">
+                        <h4>Week:</h4>
+                        <input type="week">
+                    </div>
+                    <div class="input">
+                        <h4>Month:</h4>
+                        <input type="month">
+                    </div>
+                    <div class="input">
+                        <h4>Email:</h4>
+                        <input type="email">
+                    </div>
+                    <div class="input">
+                        <h4>Search:</h4>
+                        <input type="search">
+                    </div>
+                    <div class="input">
+                        <h4>File:</h4>
+                        <input type="file">
+                    </div>
+                    <div class="input">
+                        <h4>Button:</h4>
+                        <input type="button" value="Button">
+                    </div>
+                    <div class="input">
+                        <h4>Submit:</h4>
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div class="input">
+                        <h4>Reset:</h4>
+                        <input type="reset" value="Reset">
+                    </div>
+                    <div class="input">
+                        <h4>Radio:</h4>
+                        <input type="radio" name="option" checked>
+                        <input type="radio" name="option">
+                    </div>
+                    <div class="input">
+                        <h4>CheckBox:</h4>
+                        <input type="checkbox" name="option1" checked>
+                        <input type="checkbox" name="option2">
+                    </div>
+                    <h3>Others Elements</h3>
+                    <div class="input">
+                        <h4>Progress:</h4>
+                        <progress value="0.5"></progress>
+                    </div>
+                    <div class="input">
+                        <h4>Select:</h4>
+                        <select name="gender">
+                            <option value="" selected>Select Gender...</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <h4>Text Area:</h4>
+                        <textarea cols="20" rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="example">
+                <h3>Example Form</h3>
+                    <fieldset>
+                        <legend>
+                            <h4>Personal Data:</h4>
+                        </legend>
+                        <form action="" method="post">
+                            <label for="">
+                                Fullname:
+                                <input type="text" name="fullname" required>
+                            </label>
+                            <label for="">
+                                Email:
+                                <input type="email" name="email" required>
+                            </label>
+                            <label for="">
+                                BirthDate:
+                                <input type="date" name="birthdate" required>
+                            </label>
+                            <label for="">
+                                Gender:
+                                <select name="gender" required>
+                                    <option value="Female">Female</option>
+                                    <option value="Male">Male</option>
+                                </select>
+                            </label>
+                            <label>
+                                <input type="submit" value="Send Data">
+                                <input type="reset" value="Reset Data">
+                            </label>
+                        </form>
+                    </fieldset>
+            </div>
+        </section>
+    </main>
+    <script>
+        const passw     = document.getElementById('passw')
+        const toggleOpt = document.getElementById('toggle-option')
+
+        toggleOpt.addEventListener('click', () => {
+            if (toggleOpt.textContent == 'show') {
+                toggleOpt.textContent = 'hide'
+                passw.setAttribute('type', 'text')
+            } else {
+                toggleOpt.textContent = 'show'
+                passw.setAttribute('type', 'password')
+            }
+        })
+    </script>
+</body>
+</html>

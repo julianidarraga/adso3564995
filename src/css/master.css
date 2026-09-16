@@ -61,6 +61,60 @@ body {
         }
     }
 
+    &.css {
+        background: linear-gradient(to top, #663399, #0e0715);
+        background-attachment: fixed;
+        color: #caa0f5aa;
+
+        main {
+            header.mmenu {
+                h1 {
+                    border-bottom: 2px solid #caa0f5aa;
+                }
+
+                img {
+                    border: 4px solid #caa0f5aa;
+                }
+            }
+
+            menu.mmenu {
+                a:is(:link, :visited) {
+                    &:hover {
+                        background-color: #663399;
+
+                        aside {
+                            h4 {
+                                color: #fff9;
+                            }
+                        }
+                    }
+
+                    span {
+                        background-color: #e44d26;
+                        height: 50px;
+                        font-size: 1.4rem;
+                        width: 50px;
+                        color: #fff9;
+                    }
+
+                    aside {
+                        h4 {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+            section {
+                p,
+                ul,
+                ol {
+                    color: #fff9;
+                }
+            }
+        }
+    }
+
     &.emmet {
         background: linear-gradient(to top, #7acb16, #192a05);
         background-attachment: fixed;
