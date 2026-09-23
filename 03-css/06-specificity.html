@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 - Specificity</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        button.bg-blue {
+            background-color: dodgerblue;
+            color: white;
+            cursor: pointer;
+            border-radius: 1rem;
+            border: 4px solid #fff9;
+            padding: 1rem 4rem;
+            display: flex;
+            margin: 4rem auto;
+        }
+        .bg-blue {
+            background-color: crimson !important;
+        }
+    </style>
+</head>
+
+<body class="css">
+    <a href="index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header class="mainmenu">
+            <h1>06 - Specificity</h1>
+            <h3>Is score/rank that determines which style declaration is ultimately applied to an element.</h3>
+        </header>
+        <main>
+            <section>
+                <h4>Try to change button bg color:</h4>
+                <button class="bg-blue">press Me</button>
+            </section>
+
+        </main>
+</body>
+
+</html>
