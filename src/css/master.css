@@ -76,7 +76,14 @@ body {
                     border: 4px solid #caa0f5aa;
                 }
             }
-
+            h3{
+                font-weight: 300;
+                }
+                ul, ol {
+                    color: #fff9ff;
+                    text-align:left;
+                    }
+                }
             menu.mmenu {
                 a:is(:link, :visited) {
                     &:hover {
@@ -109,7 +116,7 @@ body {
                 p,
                 ul,
                 ol {
-                    color: #fff9;
+                    color: #fff9ff;
                 }
             }
         }
@@ -272,7 +279,16 @@ body {
             padding: 0.6rem;
             margin: 1rem auto;
             width: 360px;
-        }
+        h3.subtitle {
+            font-weight: 500;
+            padding-bottom: 0.2rem;
+            border-bottom: 2px dotted #fff9;
+            }
+            p {
+                color:#fff9;
+                text-align: justify;
+                }
+            }
 
         menu.mmenu {
             display: flex;
@@ -346,4 +362,3 @@ body {
             }
         }
     }
-}
