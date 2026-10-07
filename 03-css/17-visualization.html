@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-visualization</title>
+    <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        div.parent {
+            background-color: #0006;
+            border: 2px solid rgba(89, 245, 32, 0.8);
+            display: flex;
+            flex-wrap: wrap; 
+            padding: 10px;
+            gap: 0.5rem;
+            margin: 20px auto;
+            width: 160px;
+        }
+        div.child {
+            background-color: #0be1b6;
+            border: 2px solid rgba(108, 118, 116, 0.2);
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 41px;
+            width: 41px;
+        }
+        div.child.none {
+            display: none;
+        }
+        div.child.hidden {
+            visibility: hidden;
+        }
+        div.parent-box {
+            background-color: #0006;
+            display: flex;
+            margin: 5rem auto;
+            gap: 10px;
+        }
+        div.box {
+            border: 2px solid rgba(89, 245, 32, 0.8);
+            height: 150px;
+            padding: 8px;
+        }
+        main section div.box p {
+            color: #ffffff;
+            font-size: 0.6rem;
+            text-align: justify;
+        }
+        section div.box h4 {
+            background-color: #fff;
+            color: #000c;
+            font-size: 1rem;
+            text-align: center;
+            padding: 4px;
+            margin: 0;
+        }
+        div.box2 {
+            overflow: hidden;
+        }
+        div.box3 {
+            overflow: scroll;
+        }
+        div.element {
+            border: 2px solid #0009;
+            width: 120px;
+            font-size: 4.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 80px;
+        }
+        div.parent-element {
+            display: flex;
+            margin: 20px auto;
+            gap: 10px;
+            padding-bottom: 4rem;
+        }
+        div.element1 {
+            background-color:#00ff00;
+            left: 60px;
+            z-index: 1;
+        }
+        div.element2 {
+            background-color:#0000ff;
+            left: 0px;
+            top: 30px;
+            z-index: 2;
+        }
+        div.element3 {
+            background-color:#ff0000;
+            left: -60px;
+            top: 60px;
+            z-index: 3;
+        }
+    </style>
+    </head>
+    <body class="css">
+     <nav class="goback">
+            <a href="index.html">
+                 <svg xmlns=< xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+                    </path>
+                </svg>
+            </a> 
+        </nav>
+    <main>
+        <header class="mmenu internal">
+            <h1>17-Visualization</h1>
+            <img src="../src/images/logo-css.png" alt="Css">
+            <h3>Description</h3>
+            <ul>
+                <li>Display: block|inline|none|flex|grid</li>
+                <li>Visibility: visible|hidden</li>
+                <li>Overflow: visible|hidden|scroll|auto</li>
+                <li>Z-Index: 1...n</li>
+            </ul>
+        </header>
+        <section>
+            <h3 class="subtitle">Child 5 = display: none</h3>
+            <div class="parent">
+                <div class="child child1">1</div>
+                <div class="child child2">2</div>
+                <div class="child child3">3</div>
+                <div class="child child4">4</div>
+                <div class="child child5 none">5</div>
+                <div class="child child6">6</div>
+            </div>
+            <h3 class="subtitle">Child 5 = visibility: hidden</h3>
+            <div class="parent">
+                <div class="child child1">1</div>
+                <div class="child child2">2</div>
+                <div class="child child3">3</div>
+                <div class="child child4">4</div>
+                <div class="child child5 hidden">5</div>
+                <div class="child child6">6</div>
+            </div>
+            <h3 class="subtitle">Overflow</h3>
+            <div class="parent-box">
+                <div class="box box1">
+                    <h4>visible</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, quisquam ullam nemo nam labore deleniti odio commodi aperiam laboriosam sapiente corrupti aut minus accusamus alias dolores reiciendis voluptates laborum recusandae tempore, voluptas nisi. Odit asperiores eaque alias reiciendis id iste perspiciatis fugit commodi numquam accusamus ratione accusantium voluptatem fuga, explicabo adipisci, libero temporibus dolores! Nulla architecto odit illo? Numquam voluptatibus, mollitia pariatur dolorem non iure consequatur ad? Sit hic eum, quas repellat incidunt nesciunt cumque quod dicta exercitationem. Deleniti, labore ducimus? Consequatur iste quibusdam est, reprehenderit aperiam, earum a itaque rem tempore odit ducimus, obcaecati veritatis autem? Consequatur, nesciunt inventore rem eius delectus sit dolores culpa ullam, porro consectetur quae.
+                    </p>
+                </div>
+            </div>
+            <div class="parent-box mt">
+                <div class="box box2">
+                    <h4>hidden</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, quisquam ullam nemo nam labore deleniti odio commodi aperiam laboriosam sapiente corrupti aut minus accusamus alias dolores reiciendis voluptates laborum recusandae tempore, voluptas nisi. Odit asperiores eaque alias reiciendis id iste perspiciatis fugit commodi numquam accusamus ratione accusantium voluptatem fuga, explicabo adipisci, libero temporibus dolores! Nulla architecto odit illo? Numquam voluptatibus, mollitia pariatur dolorem non iure consequatur ad? Sit hic eum, quas repellat incidunt nesciunt cumque quod dicta exercitationem. Deleniti, labore ducimus? Consequatur iste quibusdam est, reprehenderit aperiam, earum a itaque rem tempore odit ducimus, obcaecati veritatis autem? Consequatur, nesciunt inventore rem eius delectus sit dolores culpa ullam, porro consectetur quae.
+                    </p>
+                </div>
+            </div>
+            <div class="parent-box">
+                <div class="box box3">
+                    <h4>scroll</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, quisquam ullam nemo nam labore deleniti odio commodi aperiam laboriosam sapiente corrupti aut minus accusamus alias dolores reiciendis voluptates laborum recusandae tempore, voluptas nisi. Odit asperiores eaque alias reiciendis id iste perspiciatis fugit commodi numquam accusamus ratione accusantium voluptatem fuga, explicabo adipisci, libero temporibus dolores! Nulla architecto odit illo? Numquam voluptatibus, mollitia pariatur dolorem non iure consequatur ad? Sit hic eum, quas repellat incidunt nesciunt cumque quod dicta exercitationem. Deleniti, labore ducimus? Consequatur iste quibusdam est, reprehenderit aperiam, earum a itaque rem tempore odit ducimus, obcaecati veritatis autem? Consequatur, nesciunt inventore rem eius delectus sit dolores culpa ullam, porro consectetur quae.
+                    </p>
+                </div>
+            </div>
+            <h3 class="subtitle">Z-Index</h3>
+            <div class="parent-element">
+                <div class="element element1">1</div>
+                <div class="element element2">2</div>
+                <div class="element element3">3</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

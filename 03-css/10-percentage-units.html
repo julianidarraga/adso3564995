@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10-percentage units</title>
+    <title>10-Percentage Units</title>
     <link rel="stylesheet" href="../src/css/master.css">
     <style>
         body main {
@@ -12,34 +12,28 @@
                 margin: 0 auto;
                 width: 80%;
                 div.parent {
-               display: flex;
-               justify-content: center;
-               align-items: center;
-
-               div.child01 {
-                background-color: indianred;
-                color: #0009;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 3.4rem;
-                height: 50dvh;
-                width: 30%;
-                }
-                  div.child02 {
-                background-color: cadetblue;
-                color: #0009;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 3.4rem;
-                height: 50dvh;
-                width: 30%;
-                
-                        }
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    div {
+                        color: #0009;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 3.4rem;
+                        height: 50dvh;
+                    }
+                    div.child01 {
+                        background-color:indianred;
+                        width: 30%;
+                    }
+                    div.child02 {
+                        background-color:cadetblue;
+                        width: 70%;
                     }
                 }
             }
+        }
     </style>
 </head>
 <body class="css">
@@ -52,14 +46,14 @@
     </nav>
     <main>
         <header class="mmenu internal">
-            <h1>10-percentage units</h1>
-            <img src="../src/images/logo-css.png" alt="Html">
+            <h1>10-Percentage Units</h1>
+            <img src="../src/images/logo-css.png" alt="Css">
             <h3>Are relative to the size of the parent element.</h3>
         </header>
-        <section class="porcentage">
+        <section class="percentage">
             <div class="parent">
                 <div class="child01">30%</div>
-                <div class="child01">70%</div>
+                <div class="child02">70%</div>
             </div>
         </section>
     </main>
