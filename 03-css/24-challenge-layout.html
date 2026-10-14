@@ -1,28 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>24-challenge-layout</title>
-    <link rel="stylesheet" href="../src/css/master.css">
-    </head>
-    <body class="css">
-     <nav class="goback">
-            <a href="index.html">
-                 <svg xmlns=< xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
-                    </path>
-                </svg>
-            </a> 
-        </nav>
+    <title>24-Challenge Sprites</title>
+    <style>
+        body {
+            background: #17a053;
+            border: 8px solid #fff;
+            margin: 0;
+            main {
+                margin: 0 auto;
+                width: 900px;
+                header {
+                    div.logo {
+                        background: url(imgs/spriteweb.png) no-repeat;
+                        background-position: -29px -440px;
+                        height: 110px;
+                        margin: 21px 0 29px 379px;
+                        width: 150px;
+                    }
+                    nav {
+                        display: flex;
+                        a {
+                            background: #14572f;
+                            border-bottom: 6px solid #fff;
+                            color: #fff;
+                            height: 58px;
+                            line-height: 58px;
+                            margin-right: 24.5px;
+                            text-align: center;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            width: 160px;
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+                div.fotos {
+                    background: #14572f;
+                    display: flex;
+                    height: 200px;
+                    margin-top: 36px;
+                    padding: 20px;
+                    width: 860px;
+                    div {
+                        background: url(imgs/spriteweb.png) no-repeat;
+                        background-position: -500px -18px;
+                        border: 2px solid #fff;
+                        height: 190px;
+                        margin-right: 24.5px;
+                        width: 264px;
+                        h3 {
+                            background: rgba(255, 255, 255, 0.4);
+                            font-size: 20px;
+                            height: 62px;
+                            line-height: 62px;
+                            margin: 0;
+                            text-align: center;
+                        }
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                div.textos {
+                    background: #14572f;
+                    height: 620px;
+                    margin-top: 40px;
+                    padding: 10px;
+                    width: 880px;
+                    div {
+                        background: #fff;
+                        display: flex;
+                        height: 200px;
+                        margin-bottom: 10px;
+                        div {
+                            background: url(imgs/spriteweb.png) no-repeat;
+                            &:first-child {
+                                background-position: -302px -505px;
+                                height: 75px;
+                                margin: 62px 53px 0 52px;
+                                width: 75px;
+                            }
+                            &:last-child {
+                                background-position: -99px -217px;
+                                height: 150px;
+                                margin: 23px 0 0 49px;
+                                width: 80px;
+                            }
+                        }
+                        p {
+                            color: #444;
+                            font-size: 16px;
+                            line-height: 28px;
+                            margin: 15px 0 0 0;
+                            text-align: justify;
+                            width: 510px;
+                        }
+                    }
+                }
+                div.encabezado {
+                    background: #fff;
+                    height: 232px;
+                    margin-top: 40px;
+                    padding: 4px;
+                    width: 892px;
+                    div {
+                        background: url(imgs/spriteweb.png) no-repeat;
+                        background-position: -516px -423px;
+                        height: 174px;
+                        margin-left: 311px;
+                        width: 222px;
+                    }
+                    nav {
+                        display: flex;
+                        margin: 8px 0 0 16px;
+                        a {
+                            border-bottom: 6px solid #fff;
+                            color: #444;
+                            height: 40px;
+                            line-height: 40px;
+                            margin-right: 25px;
+                            text-align: center;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            width: 140px;
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body>
     <main>
-        <header class="mmenu internal">
-            <h1>24-Challenge Layout</h1>
-            <img src="../src/images/logo-css.png" alt="Css">
-            <h3>Description.</h3>
+        <header>
+            <div class="logo"></div>
+
+            <nav>
+                <a href="">Inicio</a>
+                <a href="">Nosotros</a>
+                <a href="">Portafolio</a>
+                <a href="">Servicios</a>
+                <a href="">Contacto</a>
+            </nav>
         </header>
-        <section>
-            <h3 class="subtitle">Subtitle:</h3>
-        </section>
+
+        <div class="fotos">
+            <div>
+                <h3>Sprite 01</h3>
+            </div>
+            <div>
+                <h3>Sprite 02</h3>
+            </div>
+            <div>
+                <h3>Sprite 03</h3>
+            </div>
+        </div>
+
+        <div class="textos">
+            <div>
+                <div></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
+                <div></div>
+            </div>
+
+            <div>
+                <div></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
+                <div></div>
+            </div>
+
+            <div>
+                <div></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam minima blanditiis porro corporis incidunt dolorum quas, exercitationem quam voluptatibus maxime perspiciatis, hic iure quos cumque necessitatibus sit architecto facere aperiam fugit voluptates. Cumque, delectus error quod facilis odio suscipit culpa quis? Ullam autem maxime nostrum reprehenderit mollitia.</p>
+                <div></div>
+            </div>
+        </div>
+
+        <div class="encabezado">
+            <div></div>
+
+            <nav>
+                <a href="">Inicio</a>
+                <a href="">Nosotros</a>
+                <a href="">Portafolio</a>
+                <a href="">Servicios</a>
+                <a href="">Contacto</a>
+            </nav>
+        </div>
     </main>
-    </body>
+</body>
 </html>

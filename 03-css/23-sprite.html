@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>23-sprite</title>
     <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        section {
+            div#runner {
+            background: url(imgs/run-sprite.png)no-repeat;
+            border: 2px solid red;
+                height: 256px;
+                margin: 2rem auto;
+                width: 256px;
+                &.sp1 {background-position: calc(-256px * 0) 0;}
+                &.sp1 {background-position: calc(-256px * 1) 0;}
+                &.sp1 {background-position: calc(-256px * 2) 0;}
+                &.sp1 {background-position: calc(-256px * 2) 0;}
+                &.sp1 {background-position: calc(-256px * 4) 0;}
+                &.sp1 {background-position: calc(-256px * 5) 0;}
+            }
+            div#dino {
+            background: url(imgs/dino-sprite.png)no-repeat;
+                height: 128px;
+                margin: 2rem auto;
+                width: 128px;
+                &.sp1 {background-position: calc(-128px * 0) 0;}
+                &.sp1 {background-position: calc(-128px * 1) 0;}
+            }
+        }
+    </style>
     </head>
     <body class="css">
      <nav class="goback">
@@ -21,8 +46,41 @@
             <h3>Description.</h3>
         </header>
         <section>
-            <h3 class="subtitle">Subtitle:</h3>
+            <h3 class="subtitle">Runner:</h3>
+            <div id="runner" class="sp1"></div>
+            <h3 class="subtitle">Dino:</h3>
+            <div id="dino" class="sp1"></div>
         </section>
     </main>
+    <script>
+        const runner        = document.getElementById('runner');
+        const runnerSprites = 6;
+        let countRunner     = 1;
+
+        setInterval(() => {
+            if (countRunner == runnerSprites) {
+                runner.className = '';
+                countRunner = 1;
+            } else {
+                runner.className = '';
+                runner.classList.add('sp'+ ++countRunner)
+            }
+        }, 80);
+
+        const dino       = document.getElementById('dino');
+        const dinoSprites = 2;
+        let countdino     = 1;
+
+        setInterval(() => {
+            if (countdino == dinoSprites) {
+                dino.className = '';
+                countdino = 1;
+            } else {
+                dino.className = '';
+                dino.classList.add('sp'+ ++countdino)
+            }
+        }, 80);
+
+    </script>
     </body>
 </html>
