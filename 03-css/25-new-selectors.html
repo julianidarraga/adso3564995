@@ -3,26 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>25-new-selectors</title>
+    <title>25-new Selectors</title>
     <link rel="stylesheet" href="../src/css/master.css">
-    </head>
-    <body class="css">
-     <nav class="goback">
-            <a href="index.html">
-                 <svg xmlns=< xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
-                    </path>
-                </svg>
-            </a> 
-        </nav>
+    <style>
+        section ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                border: 1px solid #fff9;
+                padding: 0.4rem;
+                margin-bottom: 0.4rem;
+                width: 120px;
+                &:first-of-type {
+                    background-color: #caa0f599;
+                }
+                &:last-of-type {
+                    background-color: #caa0f599;
+                }
+                &:nth-of-type(3) {
+                    background-color: #93e57299;
+                }
+            }
+        }
+        section div.chess {
+            outline: 2px solid #fffd;
+            margin: 0 auto;
+            height: 348px;
+            width: 350px;
+            div.f {
+                display: inline-block;
+                div.c {
+                    background-color: #fffd;
+                    height: 40px;
+                    margin-bottom: 4px;
+                    width: 40px;
+                    &:last-of-type {
+                        margin-bottom: 0 !important;
+                    }
+                }
+            }
+            div.f:nth-of-type(even) {
+                div.c:nth-of-type(odd) {
+                    background-color: #000d;
+                }
+            }
+            div.f:nth-of-type(odd) {
+                div.c:nth-of-type(even) {
+                    background-color: #000d;
+                }
+            }
+        }
+
+        section div.target {
+            div.menu-fruits {
+                text-align: center;
+                a:link, a:visited {
+                    border: 2px solid #fff9;
+                    display: inline-block;
+                    color: #fff9;
+                    padding: 0.4rem;
+                    text-decoration: none;
+                    width: 80px;
+                    &:hover {
+                        color: #fff;
+                        border-bottom-color: #fff;
+                    }
+                }
+            }
+            div.emojis {
+                min-height: 200px;
+                div.fruit {
+                    display: none;
+                    text-align: center;
+                    zoom: 10;
+                    &:target {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        section {
+            p.yellow::selection { background-color: #ffcd00; }
+            p.blue::selection   { background-color: #003087; } 
+            p.red::selection    { background-color: #c8102e; } 
+        }
+    </style>
+</head>
+<body class="css">
+    <nav class="goback">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256">
+                <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+            </svg>
+        </a>
+    </nav>
     <main>
         <header class="mmenu internal">
-            <h1>25-New Selectors</h1>
+            <h1>25-new Selectors</h1>
             <img src="../src/images/logo-css.png" alt="Css">
-            <h3>Description.</h3>
+            <h3>Used to select the element(s) you want to style.</h3>
         </header>
         <section>
-            <h3 class="subtitle">Subtitle:</h3>
+            <h3 class="subtitle">:first-of-type|:last-of-type</h3>
+            <ul>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+                <li>Fourth</li>
+                <li>Last</li>
+            </ul>
+            <h3 class="subtitle">:nth-child(n)</h3>
+            <div class="chess">
+                <div class="f">
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                </div>
+                <div class="f">
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                </div>
+                <div class="f">
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                </div>
+                <div class="f">
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                </div>
+                <div class="f">
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                </div>
+                <div class="f">
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                </div>
+                <div class="f">
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                </div>
+                <div class="f">
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                    <div class="c"></div>
+                </div>
+            </div>
+            <h3 class="subtitle">:target</h3>
+            <div class="target">
+                <div class="menu-fruits">
+                    <a href="#apple">Apple</a>
+                    <a href="#pear">Pear</a>
+                    <a href="#orange">Orange</a>
+                </div>
+                <div class="emojis">
+                    <div id="apple" class="fruit">🍎</div>
+                    <div id="pear" class="fruit">🍐</div>
+                    <div id="orange" class="fruit">🍊</div>
+                </div>
+            </div>
+            <h3 class="subtitle">::selection</h3>
+            <p class="yellow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, a?
+            </p>
+            <p class="blue">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, a?
+            </p>
+            <p class="red">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, a?
+            </p>
         </section>
     </main>
-    </body>
+</body>
 </html>
