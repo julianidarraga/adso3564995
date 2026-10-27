@@ -1,28 +1,127 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>29-new-backgrounds</title>
+    <title>29-New Backgrounds</title>
     <link rel="stylesheet" href="../src/css/master.css">
-    </head>
-    <body class="css">
-     <nav class="goback">
-            <a href="index.html">
-                 <svg xmlns=< xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
-                    </path>
-                </svg>
-            </a> 
-        </nav>
+    <style>
+        section {
+            div.multiples {
+                background: url(imgs/bg3.png),
+                            url(imgs/bg2.png),
+                            url(imgs/bg1.png);
+                height: 453px;
+                width: 320px;
+            }
+            div {
+                outline: 4px solid #fffc;
+                border-radius: 12px;
+                corner-shape: squircle;
+                margin: 1rem auto;
+                width: 320px;
+                height: 200px;
+
+                &.gradient1 {
+                    background: linear-gradient(to right, aqua, darkblue);
+                }
+                &.gradient2 {
+                    background: linear-gradient(45deg, lime, black, lime);
+                }
+                &.gradient3 {
+                    background: linear-gradient(#ffcd00 50%, 
+                                                #003087 50%,
+                                                #003087 75%, 
+                                                #c8102e 75%);
+                }
+                &.gradient4 {
+                    background: linear-gradient(to right, black 50%, white 50%);
+                    background-size: 25px;
+                }
+                &.gradient5 {
+                    background: radial-gradient(circle, crimson, pink);
+                }
+                &.gradient6 {
+                    background: radial-gradient(circle, yellow 15%, 
+                                                        red 15%, 
+                                                        red 30%, 
+                                                        blue 30%,
+                                                        blue 45%, 
+                                                        black 45%,
+                                                        black 60%, 
+                                                        white 60%);
+                }
+                &.gradient7 {
+                    background: conic-gradient(red, green, blue);
+                }
+
+                &.mask {
+                    background: linear-gradient(to right, red, white, green);
+                    mask-image: url(imgs/mask.svg);
+                    mask-size: 100% 100%;
+                }
+            }
+
+            h4 {
+                font-size: 8rem;
+                text-align: center;
+                margin: 0;
+
+                &.clip1 {
+                    background: linear-gradient(crimson, black);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                &.clip2 {
+                    background: url(imgs/bgfire.jpg) no-repeat center;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-size: 10rem;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    </style>
+</head>
+<body class="css">
+    <nav class="goback">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256">
+                <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+            </svg>
+        </a>
+    </nav>
     <main>
         <header class="mmenu internal">
             <h1>29-New Backgrounds</h1>
             <img src="../src/images/logo-css.png" alt="Css">
-            <h3>Description.</h3>
+            <h3>Modern background features including multiple background layers, CSS gradients.</h3>
         </header>
         <section>
-            <h3 class="subtitle">Subtitle:</h3>
+            <h3 class="subtitle">Bgs Multiples:</h3>
+            <div class="multiples"></div>
+            <h3 class="subtitle">Bgs Gradients:</h3>
+            <h5>linear-gradient(to direction, color1, color2)</h5>
+            <div class="gradient1"></div>
+            <h5>linear-gradient(degrees, color1, color2)</h5>
+            <div class="gradient2"></div>
+            <h5>Colombia Flag</h5>
+            <div class="gradient3"></div>
+            <h5>Vertical Lines</h5>
+            <div class="gradient4"></div>
+            <h5>radial-gradient(shape, color1, color2)</h5>
+            <div class="gradient5"></div>
+            <h5>BullsEye</h5>
+            <div class="gradient6"></div>
+            <h5>conic-gradient(color1, color2)</h5>
+            <div class="gradient7"></div>
+            <h3 class="subtitle">Bgs Clip:</h3>
+            <h4 class="clip1">ADSO</h4>
+            <h4 class="clip2">fire</h4>
+            <h3 class="subtitle">Bg Mask:</h3>
+            <div class="mask"></div>
         </section>
     </main>
-    </body>
+</body>
 </html>
