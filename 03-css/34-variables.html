@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>34-variables</title>
     <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        :root {
+            --btn-width: 320px;
+            --btn-padding: 0.4rem 0.8rem;
+            --primary-color: #3a91ee;
+            --secondary-color: #727e8a;
+            --primary-border: 4px solid #a3cfff;
+            --secondary-border: 4px solid #c5d1dc; 
+        }
+        section {
+            button.btn {
+                border-radius: 8px;
+                corner-shape: squircle;
+                display: block;
+                margin: 0.4rem auto;
+                padding: var(--btn-padding);
+                width: var(--btn-width);
+
+                &.btn1 {
+                    background: var(--primary-color);
+                    border: var(--secondary-border);
+                }
+
+                &.btn2 {
+                    background: var(--secondary-color);
+                    border: var(--secondary-border);
+                }
+            }
+        }
+    </style>
     </head>
     <body class="css">
      <nav class="goback">
@@ -18,10 +48,12 @@
         <header class="mmenu internal">
             <h1>34-Variables</h1>
             <img src="../src/images/logo-css.png" alt="Css">
-            <h3>Description.</h3>
+            <h3> Custom properties (--custom-property) and the var() function, allowing reusable values across a stylesheet for easier maintenance and dynamic updates.</h3>
         </header>
         <section>
-            <h3 class="subtitle">Subtitle:</h3>
+            <h3 class="subtitle">Examples:</h3>
+            <button class="btn btn1">Primary</button>
+            <button class="btn btn2">Secondary</button>
         </section>
     </main>
     </body>

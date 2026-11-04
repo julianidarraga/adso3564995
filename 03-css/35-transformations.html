@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>35-transformations</title>
     <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        section {
+            img {
+                display: block;
+                margin: 2rem auto;
+
+                &.transform1 {
+                    transform: rotate(90deg);
+                }
+
+                &.transform2 {
+                    transform: scale(000000000000000000000.5);
+                }
+
+                &.transform3 {
+                    transform: TranslateX(-100px);
+                }
+
+                &.transform4 {
+                    transform: skew(30deg);
+                }
+
+                &.transform5 {
+                    transform: rotate(45deg) scale(2);
+                }
+            }
+        }
+    </style>
     </head>
     <body class="css">
      <nav class="goback">
@@ -18,10 +46,19 @@
         <header class="mmenu internal">
             <h1>35-Transformations</h1>
             <img src="../src/images/logo-css.png" alt="Css">
-            <h3>Description.</h3>
+            <h3> Property (transform) allowing 2D or 3D manipulation of elements, such as translate(), rotate(), scale(), and skew().</h3>
         </header>
         <section>
-            <h3 class="subtitle">Subtitle:</h3>
+            <h3 class="subtitle">Rotate: 90deg</h3>
+            <img class="transform1" src="imgs/mario.png" width="180px">
+            <h3 class="subtitle">Scale: 0.5</h3>
+            <img class="transform2" src="imgs/mario.png" width="180px">
+            <h3 class="subtitle">TranslateX: -100px</h3>
+            <img class="transform3" src="imgs/mario.png" width="180px">
+            <h3 class="subtitle">Skew: 30deg</h3>
+            <img class="transform4" src="imgs/mario.png" width="180px">
+            <h3 class="subtitle">Rotate Scale:</h3>
+            <img class="transform5" src="imgs/mario.png" width="180px">
         </section>
     </main>
     </body>

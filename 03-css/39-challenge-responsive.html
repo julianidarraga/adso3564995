@@ -1,28 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>39-challenge-responsive</title>
-    <link rel="stylesheet" href="../src/css/master.css">
-    </head>
-    <body class="css">
-     <nav class="goback">
-            <a href="index.html">
-                 <svg xmlns=< xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
-                    </path>
-                </svg>
-            </a> 
-        </nav>
+    <title>Resident Evil 4 - Personajes</title>
+    <style>
+        *{
+            transition: all 0.4s ease;
+        }
+
+        body {
+            background: url(imgs/resident-evil-4-cover-castle.png) no-repeat center / cover fixed;
+            background-color: #07101d;
+            color: #fff;
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+
+            main {
+                border: 10px solid #fff;
+                padding: 1rem;
+                margin: 2rem auto;
+                width: 1228px; 
+                background-color: #001636;
+
+                header {
+                    figure.logo {
+                        background: url(imgs/resident-evil-4-cover-village.png) no-repeat center / cover;
+                        padding: 0;
+                        height: 354px;
+                        margin: 0 auto;
+                        width: 919px;
+                    }
+
+                    menu {
+                        margin: 0;
+                        padding: 0;
+
+                        a:is(:link, :visited){
+                            background: #fff;
+                            color: #013571;
+                            font-size: 1.2rem;
+                            padding: 1.4rem 1rem;
+                            display: inline-block;
+                            text-align: center;
+                            text-decoration: none;
+                            width: 370px;
+
+                            &:hover {
+                                background: linear-gradient(#013571 90%, #fff 90%);
+                                transform: translateY(10px);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                section {
+                    h1 {
+                        text-align: center;
+                        color: #e10000;
+                        font-size: 4.5rem;
+                        margin: 2rem 0;
+                    }
+
+                    article {
+                        margin-bottom: 1.5rem;
+
+                        figure {
+                            display: inline-block;
+                            vertical-align: top;
+                            margin: 0;
+                            width: 270px;
+                            height: 330px;
+                            border: 2px solid #fff;
+                        }
+
+                        div {
+                            display: inline-block;
+                            vertical-align: top;
+                            margin-left: 1.5rem;
+                            width: 880px;
+                        }
+
+                        h2 {
+                            font-size: 2rem;
+                            margin-top: 0;
+                        }
+
+                        p {
+                            line-height: 1.8rem;
+                            text-align: justify;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        @media (max-width:1288px){
+            body {
+                main {
+                    width: 800px;
+
+                    header {
+                        figure.logo {
+                            height: 370px;
+                            width: 348px;
+                        }
+                        menu {
+                            a:is(:link, :visited){
+                                width: 220px;
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                    section {
+                        h1 {
+                            font-size: 3.5rem;
+                        }
+                        article {
+                            figure {
+                                width: 260px;
+                                height: 300px;
+                            }
+                            div {
+                                width: 480px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media (max-width:860px){
+            body {
+                main {
+                    width: 360px;
+
+                    header {
+                        figure.logo {
+                            height: 156px;
+                            width: 162px;
+                        }
+                        menu {
+                            a:is(:link, :visited){
+                                display: block;
+                                margin-bottom: 0.8rem;
+                                width: 326px;
+                            }
+                        }
+                    }
+                    section {
+                        h1 {
+                            font-size: 2.4rem;
+                        }
+                        article {
+                            figure {
+                                display: block;
+                                margin: 0 auto 1rem auto;
+                                width: 330px;
+                                height: 300px;
+                            }
+                            div {
+                                display: block;
+                                margin-left: 0;
+                                width: 330px;
+                            }
+                            h2 {
+                                font-size: 1.6rem;
+                            }
+                            p {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body>
     <main>
-        <header class="mmenu internal">
-            <h1>39-Challenge Responsive</h1>
-            <img src="../src/images/logo-css.png" alt="Css">
-            <h3>Description.</h3>
+        <header>
+            <figure class="logo"></figure>
+            <menu>
+                <a href="#leon">Leon S. Kennedy</a>
+                <a href="#ada">Ada Wong</a>
+                <a href="#ashley">Ashley Graham</a>
+            </menu>
         </header>
         <section>
-            <h3 class="subtitle">Subtitle:</h3>
+            <h1>RESIDENT EVIL 4</h1>
+
+            <article id="leon">
+                <figure style="background: url(imgs/resident-evil-4-leon-iconic.png) no-repeat center top / cover"></figure>
+                <div>
+                    <h2>Leon S. Kennedy</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima? Laudantium ratione tempore perferendis libero veniam accusantium fuga modi pariatur natus quo soluta cupiditate tenetur nobis asperiores error, eveniet minima.</p>
+                </div>
+            </article>
+
+            <article id="ada">
+                <figure style="background: url(imgs/resident-evil-4-ada-iconic.png) no-repeat center top / cover"></figure>
+                <div>
+                    <h2>Ada Wong</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repellat consequuntur deleniti impedit voluptatibus id non voluptas tempora, odio distinctio. Id ab ex laboriosam ducimus quae perspiciatis dolore? Suscipit, ipsum?</p>
+                </div>
+            </article>
+
+            <article id="ashley">
+                <figure style="background: url(imgs/resident-evil-4-ashley-iconic.png) no-repeat center top / cover"></figure>
+                <div>
+                    <h2>Ashley Graham</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, reiciendis quas. Distinctio iusto maxime voluptate vel laudantium optio, aliquid aspernatur eaque, exercitationem cumque amet, voluptatem officia ut atque officiis labore?</p>
+                </div>
+            </article>
         </section>
     </main>
-    </body>
+</body>
 </html>

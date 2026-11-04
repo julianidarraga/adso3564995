@@ -5,6 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>31-filters</title>
     <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        section {
+            img.filter {
+                background: linear-gradient(45deg, 
+                                          teal 50%, rebeccapurple 50%);
+                border-radius: 14px;
+                corner-shape: squircle;
+                width: 140px;
+                display: block;
+                margin: 2rem auto;
+                transition: all 1s ease;
+
+                &.filter1 {
+                    filter: grayscale(1);
+                }
+                &.filter2 {
+                    filter: blur(8px);
+                }
+                &.filter3 {
+                    filter: sepia(1);
+                }
+                &.filter4 {
+                    filter: brightness(.5);
+                }
+                &.filter5 {
+                    filter: invert();
+                }
+                &.filter6 {
+                    filter: drop-shadow(0 0 12px #fff);
+                }
+                &.filter7 {
+                    filter: hue-rotate(300deg);
+                }
+
+                &:hover {
+                    filter: none;
+                }
+
+
+            }
+        }
+    </style>
     </head>
     <body class="css">
      <nav class="goback">
@@ -18,10 +60,23 @@
         <header class="mmenu internal">
             <h1>31-Filters</h1>
             <img src="../src/images/logo-css.png" alt="Css">
-            <h3>Description.</h3>
+            <h3>Property (filter) applying graphical transformations (e.g., blur(), grayscale(), contrast(), drop-shadow()) to elements before display.</h3>
         </header>
         <section>
-            <h3 class="subtitle">Subtitle:</h3>
+            <h3 class="subtitle">GrayScale</h3>
+            <img class="filter filter1" src="imgs/inosuke.png" alt="Inosuke">
+            <h3 class="subtitle">Blur</h3>
+            <img class="filter filter2" src="imgs/inosuke.png" alt="Inosuke">
+            <h3 class="subtitle">Sepia</h3>
+            <img class="filter filter3" src="imgs/inosuke.png" alt="Inosuke">
+            <h3 class="subtitle">Brightness</h3>
+            <img class="filter filter4" src="imgs/inosuke.png" alt="Inosuke">
+            <h3 class="subtitle">Invert</h3>
+            <img class="filter filter5" src="imgs/inosuke.png" alt="Inosuke">
+            <h3 class="subtitle">Drop Shadow</h3>
+            <img class="filter filter6" src="imgs/inosuke.png" alt="Inosuke">
+            <h3 class="subtitle">HUE Rotate</h3>
+            <img class="filter filter7" src="imgs/inosuke.png" alt="Inosuke">
         </section>
     </main>
     </body>

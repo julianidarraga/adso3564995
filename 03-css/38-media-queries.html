@@ -3,26 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>38-media-queries</title>
-    <link rel="stylesheet" href="../src/css/master.css">
-    </head>
-    <body class="css">
-     <nav class="goback">
-            <a href="index.html">
-                 <svg xmlns=< xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
-                    </path>
-                </svg>
-            </a> 
-        </nav>
+    <title>38-Media Queries</title>
+    <style>
+        *{
+            transition: all 0.4s ease;
+        }
+
+        body {
+            background-color: #013571;
+            color: #fff;
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+
+            main {
+                border: 10px solid #fff;
+                padding: 1rem;
+                margin: 2rem auto;
+                width: 1228px; /* 1280 - 20px + 3px */
+
+                header {
+                    figure.logo {
+                        background: url(imgs/WhatsApp\ Image\ 2026-11-03\ at\ 10.13.51\ PM\ \(1\).jpeg)no-repeat center;
+                        padding: 0;
+                        height: 354px;
+                        margin: 0 auto;
+                        width: 919px;
+                    }
+
+                    menu {
+                        margin: 0;
+                        padding: 0;
+
+                        a:is(:link, :visited){
+                            background: #fff;
+                            color: #013571;
+                            font-size: 1.2rem;
+                            padding: 1.4rem 1rem;
+                            display: inline-block;
+                            text-align: center;
+                            text-decoration: none;
+                            width: 209.2px;
+
+                            &:hover {
+                                background: linear-gradient(#013571 90%, #fff 90%);
+                                transform: translateY(10px);
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                section {
+                    h2 {
+                        text-align: center;
+                        font-size: 2.8rem;
+
+                        &:nth-of-type(2),
+                        &:last-of-type {
+                        display: none;
+                        }
+                    }
+
+                    p {
+                        line-height: 1.8rem;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+        /* Media queries */
+
+        /* breakpoint:  < 1288px */
+
+        @media (max-width:1288px){
+            body {
+                main {
+                    width: 800px;
+
+                    header {
+                        figure.logo {
+                            background: url(imgs/WhatsApp\ Image\ 2026-11-03\ at\ 10.13.51\ PM\ \(2\).jpeg) no-repeat center;
+                            height: 370px;
+                            width: 348px;
+
+                        }
+                        menu {
+                            a:is(:link, :visited){
+                                width: 124px;
+                            }
+                        }
+                    }
+                    section {
+                        h2 {
+                            &:first-of-type{
+                                display: none;
+                            }
+                            &:nth-of-type(2){
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*breakpoint: 860px */
+        @media (max-width:860px){
+            body {
+                main {
+                    width: 360px;
+
+                    header {
+                        figure.logo {
+                            background: url(imgs/WhatsApp\ Image\ 2026-11-03\ at\ 10.13.51\ PM\ \(3\).jpeg) no-repeat center;
+                            height: 156px;
+                            width: 162px;
+
+                        }
+                        menu {
+                            a:is(:link, :visited){
+                                display: block;
+                                margin-bottom: 0.8rem;
+                                width: 330px;
+                            }
+                        }
+                    }
+                    section {
+                        h2 {
+                            &:nth-of-type(2){
+                                display: none;
+                            }
+                            &:last-of-type{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body>
     <main>
-        <header class="mmenu internal">
-            <h1>38-Media Queries</h1>
-            <img src="../src/images/logo-css.png" alt="Css">
-            <h3>Description.</h3>
+        <header>
+            <figure class="logo"></figure>
+            <menu>
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Products</a>
+                <a href="">Services</a>
+                <a href="">Contact</a>
+            </menu>
         </header>
         <section>
-            <h3 class="subtitle">Subtitle:</h3>
+            <h2>Desktop: > 1280px</h2>
+            <h2>Tablet: < 1280px > 800px</h2>
+            <h2>Mobile: > 800px</h2>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, quos commodi! At accusamus facere architecto, id temporibus a similique excepturi nulla nobis veritatis tempore reiciendis illum veniam consectetur ea dolores eligendi eius. Ut, doloribus dolore. Hic fugiat veritatis non in dolore, libero ea ut. Vitae, voluptatibus optio similique laborum exercitationem vel quam! Cum, dolores quos. Numquam impedit consequatur explicabo quae?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, culpa alias animi sunt mollitia et ex cum at pariatur facere doloribus. Obcaecati eveniet ullam exercitationem! Vel deleniti inventore sit esse asperiores atque repellendus temporibus labore nemo mollitia cupiditate odit, magni debitis sequi omnis illo maiores! Fuga quas ducimus eligendi, voluptate ullam impedit, numquam temporibus minima quasi labore aperiam corporis beatae!
+            </p>
+
         </section>
     </main>
-    </body>
-</html>
+    
+</body>
+</html> 
