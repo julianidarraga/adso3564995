@@ -3,226 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resident Evil 4 - Personajes</title>
-    <style>
-        *{
-            transition: all 0.4s ease;
+    <title>Resident Evil</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: all 0.4s ease;
+    }
+
+    body {
+        min-height: 100vh;
+        font-family: sans-serif;
+        background: #000;
+        color: #fff;
+        position: relative;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url(imgs/descarga.jpg) no-repeat center;
+        background-size: cover;
+        opacity: 0.15;
+        z-index: -1;
+    }
+
+    main {
+        outline: 10px solid #fff;
+        padding: 1rem;
+        width: 1288px;
+        margin: 2rem auto;
+        background: rgba(0, 0, 0, 0.25);
+
+        header {
+
+            figure.logo {
+                background: url(imgs/RE4.jpg) no-repeat center;
+                background-size: contain;
+                padding: 0;
+                height: 354px;
+                margin: 0 auto;
+                width: 919px;
+            }
+
+            menu {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+
+                a:is(:link, :visited) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 220px;
+                    padding: 10px;
+                    background: red;
+                    color: #000;
+                    text-align: center;
+                    text-decoration: none;
+
+                    img {
+                        width: 100%;
+                        height: 180px;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+
+                    span {
+                        font-size: 1.2rem;
+                        padding: 12px;
+                    }
+
+                    &:hover {
+                        background: darkred;
+                        color: #fff;
+                        transform: translateY(8px);
+                    }
+                }
+            }
         }
 
-        body {
-            background: url(imgs/resident-evil-4-cover-castle.png) no-repeat center / cover fixed;
-            background-color: #07101d;
-            color: #fff;
-            font-family: sans-serif;
-            padding: 0;
-            margin: 0;
+        section {
+            h2 {
+                text-align: center;
+                font-size: 2.8rem;
+            }
 
-            main {
-                border: 10px solid #fff;
+            p {
+                line-height: 1.8rem;
+                text-align: justify;
+            }
+
+            .intro {
+                text-align: center;
+            }
+
+            .bio {
+                display: grid;
+                grid-template-columns: 220px 1fr;
+                gap: 1.5rem;
+                align-items: start;
+                margin-top: 1.5rem;
+                padding: 1.5rem;
+                background: rgba(255, 255, 255, 0.08);
+                border-left: 6px solid #fff;
+                scroll-margin-top: 1rem;
+
+                &:target {
+                    background: rgba(139, 0, 0, 0.35);
+                    border-left-color: darkred;
+                }
+
+                img {
+                    width: 100%;
+                    height: 280px;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 12px;
+                }
+
+                h2 {
+                    font-size: 2.2rem;
+                    margin-bottom: 1rem;
+                }
+
+                p + p {
+                    margin-top: 0.8rem;
+                }
+            }
+        }
+    }
+    #ashley img {
+        height: auto;
+        max-height: 520px;
+        object-fit: contain;
+        object-position: top center;
+    }
+
+    @media (max-width: 1288px) {
+        main {
+            width: 800px;
+
+            header {
+                figure.logo {
+                    width: 348px;
+                    height: 370px;
+                }
+
+                menu {
+                    a:is(:link, :visited) {
+                        width: 124px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 860px) {
+        main {
+            width: 360px;
+
+            header {
+                figure.logo {
+                    width: 162px;
+                    height: 156px;
+                }
+
+                menu {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    a:is(:link, :visited) {
+                        width: 100%;
+                        max-width: 280px;
+                        padding: 1rem;
+                    }
+                }
+            }
+
+            section .bio {
+                grid-template-columns: 1fr;
                 padding: 1rem;
-                margin: 2rem auto;
-                width: 1228px; 
-                background-color: #001636;
 
-                header {
-                    figure.logo {
-                        background: url(imgs/Gemini_Generated_Image_tpr1ewtpr1ewtpr1.jpg) no-repeat center / cover;
-                        padding: 0;
-                        height: 354px;
-                        margin: 0 auto;
-                        width: 919px;
-                    }
-
-                    menu {
-                        margin: 0;
-                        padding: 0;
-                        text-align: center; 
-
-                        a:is(:link, :visited){
-                            background: #fff;
-                            color: #013571;
-                            font-size: 1.2rem;
-                            padding: 1.4rem 0.5rem;
-                            display: inline-block;
-                            text-align: center;
-                            text-decoration: none;
-                            width: 290px; 
-                            box-sizing: border-box;
-
-                            &:hover {
-                                background: linear-gradient(#013571 90%, #fff 90%);
-                                transform: translateY(10px);
-                                color: #fff;
-                            }
-                        }
-                    }
+                img {
+                    width: 100%;
+                    height: 240px;
                 }
-                section {
-                    h1 {
-                        text-align: center;
-                        color: #e10000;
-                        font-size: 4.5rem;
-                        margin: 2rem 0;
-                    }
 
-                    article {
-                        margin-bottom: 1.5rem;
-
-                        figure {
-                            display: inline-block;
-                            vertical-align: top;
-                            margin: 0;
-                            width: 270px;
-                            height: 330px;
-                            border: 2px solid #fff;
-                        }
-
-                        div {
-                            display: inline-block;
-                            vertical-align: top;
-                            margin-left: 1.5rem;
-                            width: 880px;
-                        }
-
-                        h2 {
-                            font-size: 2rem;
-                            margin-top: 0;
-                        }
-
-                        p {
-                            line-height: 1.8rem;
-                            text-align: justify;
-                        }
-                    }
+                h2 {
+                    font-size: 1.5rem;
                 }
             }
         }
-
-        @media (max-width:1288px){
-            body {
-                main {
-                    width: 800px;
-
-                    header {
-                        figure.logo {
-                            height: 370px;
-                            width: 348px;
-                        }
-                        menu {
-                            a:is(:link, :visited){
-                                width: 185px;
-                                font-size: 0.9rem;
-                            }
-                        }
-                    }
-                    section {
-                        h1 {
-                            font-size: 3.5rem;
-                        }
-                        article {
-                            figure {
-                                width: 260px;
-                                height: 300px;
-                            }
-                            div {
-                                width: 480px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        
-        @media (max-width:860px){
-            body {
-                main {
-                    width: 360px;
-
-                    header {
-                        figure.logo {
-                            height: 156px;
-                            width: 162px;
-                        }
-                        menu {
-                            a:is(:link, :visited){
-                                display: block;
-                                margin-bottom: 0.8rem;
-                                width: 326px;
-                            }
-                        }
-                    }
-                    section {
-                        h1 {
-                            font-size: 2.4rem;
-                        }
-                        article {
-                            figure {
-                                display: block;
-                                margin: 0 auto 1rem auto;
-                                width: 330px;
-                                height: 300px;
-                            }
-                            div {
-                                display: block;
-                                margin-left: 0;
-                                width: 330px;
-                            }
-                            h2 {
-                                font-size: 1.6rem;
-                            }
-                            p {
-                                text-align: left;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    </style>
+    }
+</style>
 </head>
+
 <body>
     <main>
         <header>
             <figure class="logo"></figure>
+
             <menu>
-                <a href="#leon">Leon S. Kennedy</a>
-                <a href="#ada">Ada Wong</a>
-                <a href="#ashley">Ashley Graham</a>
-                <a href="#salazar">Ramon Salazar</a>
+                <a href="#leon">
+                    <img src="imgs/Leon 🗡.jpg" alt="Leon">
+                    <span>Leon</span>
+                </a>
+                <a href="#ada">
+                    <img src="imgs/descarga (1).jpg" alt="ada">
+                    <span>Ada</span>
+                </a>
+                <a href="#ashley">
+                    <img src="imgs/resident evil 4.jpg" alt="ashley">
+                    <span>Ashley</span>
+                </a>
+                <a href="#salazar">
+                    <img src="imgs/Resident Evil 4 (2023) Remake _ Salazar Icon.jpg" alt="salazar">
+                    <span>Salazar</span>
+                </a>
             </menu>
         </header>
-        <section>
-            <h1>RESIDENT EVIL 4</h1>
 
-            <article id="leon">
-                <figure style="background: url(imgs/resident-evil-4-leon-iconic.png) no-repeat center top / cover"></figure>
+        <section>
+
+            <article id="leon" class="bio">
+                <img src="imgs/resident-evil-4-leon-iconic.png" alt="Leon S. Kennedy">
                 <div>
                     <h2>Leon S. Kennedy</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, minima? Laudantium ratione tempore perferendis libero veniam accusantium fuga modi pariatur natus quo soluta cupiditate tenetur nobis asperiores error, eveniet minima.</p>
+                    <p>Leon es el personaje principal del videojuego. Es un agente del gobierno de Estados Unidos que recibe la misión de viajar a una aldea de España para rescatar a Ashley Graham, la hija del presidente. Durante su misión debe enfrentarse a los habitantes infectados por Las Plagas, combatir a los enemigos y descubrir qué está sucediendo en ese lugar.</p>
                 </div>
             </article>
 
-            <article id="ada">
-                <figure style="background: url(imgs/resident-evil-4-ada-iconic.png) no-repeat center top / cover"></figure>
+            <article id="ada" class="bio">
+                <img src="imgs/resident-evil-4-ada-iconic.png" alt="ada wong">
                 <div>
                     <h2>Ada Wong</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repellat consequuntur deleniti impedit voluptatibus id non voluptas tempora, odio distinctio. Id ab ex laboriosam ducimus quae perspiciatis dolore? Suscipit, ipsum?</p>
+                    <p>Ada es una espía que llega a España con una misión secreta: conseguir una muestra de Las Plagas. Aunque en varias ocasiones ayuda a Leon, también tiene sus propios objetivos y trabaja de manera independiente. Su papel es importante porque investiga los planes de Los Iluminados y busca obtener información y muestras del parásito.</p>
                 </div>
             </article>
 
-            <article id="ashley">
-                <figure style="background: url(imgs/resident-evil-4-ashley-iconic.png) no-repeat center top / cover"></figure>
+            <article id="ashley" class="bio">
+                <img src="imgs/resident-evil-4-ashley-iconic.png" alt="ashley graham">
                 <div>
                     <h2>Ashley Graham</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, reiciendis quas. Distinctio iusto maxime voluptate vel laudantium optio, aliquid aspernatur eaque, exercitationem cumque amet, voluptatem officia ut atque officiis labore?</p>
+                    <p>Ashley es la hija del presidente de Estados Unidos y su secuestro es el motivo principal de la misión de Leon. Fue capturada por Los Iluminados y llevada a España. Su papel consiste en acompañar a Leon durante gran parte de la aventura mientras ambos intentan escapar y encontrar una cura para la infección que lleva dentro.</p>
                 </div>
             </article>
 
-             <article id="salazar">
-                <figure style="background: url(imgs/Gemini_Generated_Image_mizgcymizgcymizg.jpg) no-repeat center top / cover"></figure>
+            <article id="salazar" class="bio">
+                <img src="imgs/Gemini_Generated_Image_mizgcymizgcymizg.jpg" alt="ramon salazar">
                 <div>
                     <h2>Ramon Salazar</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, reiciendis quas. Distinctio iusto maxime voluptate vel laudantium optio, aliquid aspernatur eaque, exercitationem cumque amet, voluptatem officia ut atque officiis labore?</p>
+                    <p>Ramón Salazar es uno de los principales enemigos de Leon. Es el gobernante del castillo y pertenece a una familia noble que apoya a Los Iluminados. Está bajo las órdenes de Osmund Saddler y ayuda a proteger los planes de la secta. Su objetivo es impedir que Leon rescate a Ashley y escapar del control de Los Iluminados.</p>
                 </div>
             </article>
         </section>
