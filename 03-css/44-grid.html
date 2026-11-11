@@ -3,26 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>44-grid</title>
-    <link rel="stylesheet" href="../src/css/master.css">
-    </head>
-    <body class="css">
-     <nav class="goback">
-            <a href="index.html">
-                 <svg xmlns=< xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
-                    </path>
-                </svg>
-            </a> 
-        </nav>
-    <main>
-        <header class="mmenu internal">
-            <h1>44-Grid</h1>
-            <img src="../src/images/logo-css.png" alt="Css">
-            <h3>Description.</h3>
-        </header>
-        <section>
-            <h3 class="subtitle">Subtitle:</h3>
-        </section>
-    </main>
-    </body>
+    <title>44-Grid</title>
+    <style>
+		.wrapper {
+			display: grid;
+			grid-template-columns: 1fr 5fr 2fr;
+			grid-template-rows: 5fr 20fr 5fr;
+			grid-gap: 10px;
+			min-height: 100vh;
+		}
+
+		header {
+			grid-column-start: 1;
+			grid-column-end: 4;
+		}
+
+		footer {
+			grid-column-start: 1;
+			grid-column-end: 4;
+		}
+
+		.wrapper * {
+			background: #4875b4;
+            color: #c5d0e6;
+            font-family: Arial;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 1px;
+			margin-right: 1px;
+		}
+	</style>
+</head>
+<body>
+    <div class="wrapper">
+		<header class="items">HEADER</header>
+		<nav class="items">NAV</nav>
+		<div class="items contents">CONTENTS</div>
+		<aside class="items">ASIDE</aside>
+		<footer class="items">FOOTER</footer>
+	</div>
+</body>
 </html>

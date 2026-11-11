@@ -5,6 +5,236 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>43-flexbox</title>
     <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+      :root {
+        --bg: #0e1424;
+        --card: #29123f;
+        --ink: #e8ecf8;
+        --muted: #9aa5c0;
+        --line: #fff3;
+        --accent: #ad76e4;
+        --accent-ink: #0b1226;
+        --stage: #1d0c2d;
+        --code-bg: #000;
+        --code-ink: #bf8df2;
+        --child-lightness: 34%;
+        --child-ink: #f1f4ff;
+      }
+
+    code,
+    pre {
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    }
+
+    main {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 4rem;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .btn-home {
+      position: fixed;
+      top: 0.8rem;
+      left: 0.8rem;
+      z-index: 20;
+      display: grid;
+      place-items: center;
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--accent-ink);
+    }
+
+    .btn-home svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      fill: currentColor;
+    }
+
+    .top {
+      padding: 2.5rem 0 1rem 2.5rem;
+    }
+
+    .top h1 {
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .top p {
+      max-width: 42rem;
+      margin: 0.6rem 0 0;
+      color: var(--muted);
+    }
+
+    .how {
+      margin: 1.2rem 0;
+      padding: 0.9rem 1.1rem;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 0.5rem 0.5rem 0;
+      background: var(--card);
+      color: var(--muted);
+    }
+
+    .how b {
+      color: var(--ink);
+    }
+
+    .group h2 {
+      margin: 3rem 0 0.2rem;
+      font-size: 1.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .group > .lead {
+      margin: 0 0 1rem;
+      color: var(--muted);
+    }
+
+    .card {
+      margin-bottom: 1.4rem;
+      padding: 1.1rem 1.2rem 1.2rem;
+      border: 1px solid var(--line);
+      border-radius: 0.75rem;
+      background: var(--card);
+    }
+
+    .card header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+
+    .card > p {
+      margin: 0.5rem 0 0.9rem;
+    }
+
+    .tag {
+      padding: 0.05rem 0.6rem;
+      border: 1px solid var(--accent);
+      border-radius: 99px;
+      color: var(--accent);
+      font-size: 0.78rem;
+    }
+
+    .tag.is-item {
+      background: var(--accent);
+      color: var(--accent-ink);
+    }
+
+    .card > .tip {
+      margin: 0 0 0.7rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .options button {
+      padding: 0.35rem 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: 0.4rem;
+      background: transparent;
+      color: var(--ink);
+      cursor: pointer;
+      font: 0.88rem ui-monospace, Menlo, Consolas, monospace;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .options button:hover {
+      border-color: var(--accent);
+    }
+
+    .options button[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: var(--accent-ink);
+    }
+
+    .hint {
+      min-height: 3.2em;
+      margin: 0.7rem 0;
+      padding: 0.5rem 0.8rem;
+      border-radius: 0.4rem;
+      background: var(--stage);
+      font-size: 0.95rem;
+    }
+
+    .hint code {
+      margin-right: 0.3rem;
+      font-weight: 700;
+    }
+
+    pre {
+      margin: 0.8rem 0 0;
+      padding: 0.8rem 1rem;
+      overflow-x: auto;
+      border-radius: 0.4rem;
+      background: var(--code-bg);
+      color: var(--code-ink);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .demo {
+      padding: 0.6rem;
+      border: 2px solid var(--line);
+      border-radius: 0.5rem;
+      background: var(--stage);
+    }
+
+    .container {
+      display: flex;
+      height: 250px;
+      overflow: hidden;
+      border: 2px dashed var(--accent);
+      border-radius: 0.3rem;
+      background: color-mix(in srgb, var(--accent) 7%, transparent);
+    }
+
+    .item {
+      min-width: 2.6rem;
+      min-height: 2.6rem;
+      padding: 0.4rem;
+      border: 1px solid hsl(var(--hue) 60% 45% / 0.5);
+      border-radius: 0.35rem;
+      background: hsl(var(--hue) 75% var(--child-lightness));
+      color: var(--child-ink);
+      font-size: 1.6em;
+      font-weight: 700;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .item.is-target {
+      outline: 3px solid var(--ink);
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
     </head>
     <body class="css">
      <nav class="goback">
@@ -20,9 +250,315 @@
             <img src="../src/images/logo-css.png" alt="Css">
             <h3>Description.</h3>
         </header>
-        <section>
-            <h3 class="subtitle">Subtitle:</h3>
-        </section>
+     <div class="how">
+                <b>Key concepts:</b> the <b>container</b> (dashed line) holds <b>items</b> (colored boxes).
+                The <b>main axis</b> is the direction in which items are laid out (horizontal by default);
+                the <b>cross axis</b> is perpendicular to it. Click the buttons on each property and watch
+                the resulting CSS. Items with a dark outline are the ones receiving the property.
+            </div>
     </main>
+    <script>
+    const GROUPS = [
+      {
+        title: 'Flex container',
+        description: 'It all starts here: turning the parent into a flex container.',
+        properties: [
+          {
+            name: 'display',
+            description:
+              'Turns an element into a flex container and its direct children into flex items. ' +
+              'It is the switch that enables every other flexbox property.',
+            defaultIndex: 0,
+            containerStyle: 'height: auto',
+            inlineText: true,
+            options: [
+              { value: 'flex', text: 'The container is block-level: it takes up the full available width.' },
+              { value: 'inline-flex', text: 'The container behaves like inline text: it only takes the space it needs and text flows next to it.' }
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Ordering & orientation',
+        description: 'Define where items are placed and whether they can wrap onto new lines.',
+        properties: [
+          {
+            name: 'flex-direction',
+            description:
+              'Sets the main axis, i.e. the direction in which items are placed. ' +
+              'The cross axis is always perpendicular to it.',
+            defaultIndex: 0,
+            tip: 'Only the visual order changes; the HTML order (and what screen readers follow) stays the same.',
+            options: [
+              { value: 'row', text: 'Horizontal axis, left to right (default).' },
+              { value: 'row-reverse', text: 'Horizontal, but starting from the right.' },
+              { value: 'column', text: 'Vertical axis, top to bottom.' },
+              { value: 'column-reverse', text: 'Vertical, starting from the bottom.' }
+            ]
+          },
+          {
+            name: 'flex-wrap',
+            description:
+              'Controls whether items must stay on a single line or may wrap onto the next one ' +
+              'when they do not fit.',
+            defaultIndex: 0,
+            containerStyle: 'align-items: flex-start',
+            itemStyle: 'width: 40%',
+            options: [
+              { value: 'nowrap', text: 'Single line: items shrink to fit (default).' },
+              { value: 'wrap', text: 'Items that do not fit move to a new line, downwards.' },
+              { value: 'wrap-reverse', text: 'Same as wrap, but new lines stack upwards.' }
+            ]
+          },
+          {
+            name: 'flex-flow',
+            description:
+              'Shorthand that combines <code>flex-direction</code> and <code>flex-wrap</code> ' +
+              'in a single declaration.',
+            defaultIndex: 0,
+            itemStyle: 'width: 40%; height: 40%',
+            options: [
+              { value: 'row nowrap', text: 'Row, no wrapping (same as the defaults).' },
+              { value: 'column-reverse', text: 'Reversed column; wrap stays at nowrap.' },
+              { value: 'column wrap', text: 'A column that, once full, continues in another column.' },
+              { value: 'row-reverse wrap-reverse', text: 'Reversed row, with new lines stacking upwards.' }
+            ]
+          },
+          {
+            name: 'order',
+            description:
+              'Changes the visual order of an item without touching the HTML. ' +
+              'All items are 0 by default; lower values come first.',
+            itemIndex: 2,
+            defaultIndex: 1,
+            options: [
+              { value: '-1', text: 'Item 3 moves to the start.' },
+              { value: '0', text: 'Keeps its original position (default).' },
+              { value: '1', text: 'Item 3 moves to the end.' }
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Alignment',
+        description: 'Distribute the free space along the main axis and the cross axis.',
+        properties: [
+          {
+            name: 'justify-content',
+            description: "Distributes items along the <b>main axis</b> using the container's free space.",
+            defaultIndex: 0,
+            options: [
+              { value: 'flex-start', text: 'Items packed at the start (default).' },
+              { value: 'flex-end', text: 'Items packed at the end.' },
+              { value: 'center', text: 'Items packed in the center.' },
+              { value: 'space-between', text: 'Space is placed between items; the first and last touch the edges.' },
+              { value: 'space-around', text: 'Each item gets equal space on both sides, so the ends get half as much.' },
+              { value: 'space-evenly', text: 'Identical gaps between items and at the edges.' }
+            ]
+          },
+          {
+            name: 'align-items',
+            description: 'Aligns all items on the <b>cross axis</b>, within their line.',
+            defaultIndex: 0,
+            varyFontSize: true,
+            tip: 'auto is not a valid value for align-items (it is for align-self), so it is not listed here.',
+            options: [
+              { value: 'stretch', text: 'Items stretch to fill the height, as long as they have no fixed height (default).' },
+              { value: 'flex-start', text: 'Aligned to the top edge.' },
+              { value: 'flex-end', text: 'Aligned to the bottom edge.' },
+              { value: 'center', text: 'Vertically centered.' },
+              { value: 'baseline', text: 'Aligns the text baseline; notice the different font sizes.' }
+            ]
+          },
+          {
+            name: 'align-self',
+            description:
+              "Lets a single item (item 2) override the container's <code>align-items</code>. " +
+              'Here the container uses <code>align-items: flex-start</code> so the contrast is easy to see.',
+            itemIndex: 1,
+            defaultIndex: 0,
+            containerStyle: 'align-items: flex-start',
+            varyFontSize: true,
+            options: [
+              { value: 'auto', text: "Inherits the container's align-items (default)." },
+              { value: 'stretch', text: 'Stretches to fill the height.' },
+              { value: 'flex-start', text: 'Top.' },
+              { value: 'flex-end', text: 'Bottom.' },
+              { value: 'center', text: 'Centered.' },
+              { value: 'baseline', text: 'Aligned with the text baseline of the others.' }
+            ]
+          },
+          {
+            name: 'align-content',
+            description:
+              'Distributes the <b>lines</b> of a wrapping container along the cross axis. ' +
+              'It only has an effect when there is more than one line.',
+            defaultIndex: 5,
+            containerStyle: 'flex-wrap: wrap',
+            itemStyle: 'width: 40%; height: 3rem',
+            tip: "Don't mix them up: align-items aligns items within a line; align-content distributes the lines themselves.",
+            options: [
+              { value: 'flex-start', text: 'Lines packed at the top.' },
+              { value: 'flex-end', text: 'Lines packed at the bottom.' },
+              { value: 'center', text: 'Lines packed in the center.' },
+              { value: 'space-between', text: 'First line at the top, last at the bottom, space in between.' },
+              { value: 'space-around', text: 'Equal space around each line.' },
+              { value: 'stretch', text: 'Lines stretch to share the free space (default).' }
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Flexibility',
+        description: 'How items grow, shrink and get sized. Item 3 is the star here.',
+        properties: [
+          {
+            name: 'flex-grow',
+            description:
+              'Sets how much of the leftover free space an item absorbs. With 0 it does not grow; ' +
+              'if several items have a value, the space is shared proportionally.',
+            itemIndex: 2,
+            defaultIndex: 0,
+            options: [
+              { value: '0', text: 'Does not grow: keeps its size (default).' },
+              { value: '1', text: 'Grows to take all the free space.' }
+            ]
+          },
+          {
+            name: 'flex-shrink',
+            description:
+              'Sets how much an item shrinks when there is not enough space. ' +
+              'Here each item is 45% wide, so together they add up to 180%.',
+            itemIndex: 2,
+            defaultIndex: 0,
+            itemStyle: 'width: 45%',
+            options: [
+              { value: '1', text: 'Shrinks along with the others (default).' },
+              { value: '0', text: 'Does not shrink: keeps its 45% and the others have to give up more space.' }
+            ]
+          },
+          {
+            name: 'flex-basis',
+            description:
+              'The initial size of an item along the main axis, before free space is distributed ' +
+              'or the item is shrunk.',
+            itemIndex: 2,
+            defaultIndex: 0,
+            containerStyle: 'flex-wrap: wrap',
+            options: [
+              { value: '30%', text: 'Starts at 30% of the container width.' },
+              { value: '50%', text: 'Starts at half the width.' },
+              { value: '100%', text: 'Takes a full line; with wrap, it forces a line break.' },
+              { value: 'content', text: 'Sized according to its content.' },
+              { value: 'auto', text: 'Uses its width (if any) or its content (default).' }
+            ]
+          }
+        ]
+      }
+    ];
+
+    const ITEM_COUNT = 4;
+    const BASE_HUE = 205;
+    const HUE_STEP = 45;
+    const FONT_SIZES_EM = [1.4, 2.8, 1.8, 3.4];
+
+    function createElement(tag, className = '', html = null) {
+      const element = document.createElement(tag);
+      if (className) element.className = className;
+      if (html !== null) element.innerHTML = html;
+      return element;
+    }
+
+    function buildContainer(property) {
+      const container = createElement('div', 'container');
+      container.style.cssText = property.containerStyle || '';
+
+      for (let index = 0; index < ITEM_COUNT; index++) {
+        const isTarget = index === property.itemIndex;
+        const item = createElement('div', isTarget ? 'item is-target' : 'item', index + 1);
+
+        item.style.cssText = property.itemStyle || '';
+        item.style.setProperty('--hue', BASE_HUE + index * HUE_STEP);
+        if (property.varyFontSize) item.style.fontSize = `${FONT_SIZES_EM[index]}em`;
+
+        container.append(item);
+      }
+
+      return container;
+    }
+
+    function buildCard(property) {
+      const appliesToItem = property.itemIndex !== undefined;
+      const selector = appliesToItem ? `.item:nth-child(${property.itemIndex + 1})` : '.container';
+
+      const card = createElement('article', 'card');
+      card.innerHTML = `
+        <header>
+          <h3><code>${property.name}</code></h3>
+          <span class="tag${appliesToItem ? ' is-item' : ''}">
+            ${appliesToItem ? 'Applies to an item' : 'Applies to the container'}
+          </span>
+        </header>
+        <p>${property.description}</p>
+        ${property.tip ? `<p class="tip">💡 ${property.tip}</p>` : ''}
+      `;
+
+      const optionsBar = createElement('div', 'options');
+      const hint = createElement('p', 'hint');
+      const demo = createElement('div', 'demo');
+      const codePreview = createElement('pre');
+      const container = buildContainer(property);
+      const target = appliesToItem ? container.children[property.itemIndex] : container;
+
+      if (property.inlineText) {
+        demo.append('Text before ', container, ' Text after');
+      } else {
+        demo.append(container);
+      }
+
+      const buttons = property.options.map(({ value }, index) => {
+        const button = createElement('button', '', value);
+        button.type = 'button';
+        button.addEventListener('click', () => selectOption(index));
+        optionsBar.append(button);
+        return button;
+      });
+
+      function selectOption(selectedIndex) {
+        const { value, text } = property.options[selectedIndex];
+
+        target.style.setProperty(property.name, value);
+        buttons.forEach((button, index) => {
+          button.setAttribute('aria-pressed', index === selectedIndex);
+        });
+        hint.innerHTML = `<code>${property.name}: ${value}</code> ${text}`;
+        codePreview.textContent = `${selector} {\n  ${property.name}: ${value};\n}`;
+      }
+
+      selectOption(property.defaultIndex);
+      card.append(optionsBar, hint, demo, codePreview);
+      return card;
+    }
+
+    function render() {
+      const main = document.querySelector('main');
+
+      GROUPS.forEach((group) => {
+        const section = createElement(
+          'section',
+          'group',
+          `<h2>${group.title}</h2><p class="lead">${group.description}</p>`
+        );
+
+        group.properties.forEach((property) => {
+          section.append(buildCard(property));
+        });
+
+        main.append(section);
+      });
+    }
+
+    render();
+  </script>
     </body>
 </html>

@@ -5,6 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>42-parallax</title>
     <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        body {
+            main {
+                section {
+                    figure.parallax {
+                        outline: 4px solid #663349;
+                        border-radius: 12px;
+                        height: 576px;
+                        margin: 0;
+                        overflow: hidden;
+                        position: relative;
+                        width: 100%;
+
+                        div.layer8, 
+                        div.layer7,
+                        div.layer6,
+                        div.layer5,
+                        div.layer4,
+                        div.layer3,
+                        div.layer2,
+                        div.layer1 {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 576px;
+                            width: 1024px;
+
+                        }
+
+                        div.layer8 {
+                            background: url(imgs/parallax-20261111T192937Z-1-001/parallax/layer_08.png) repeat-x 0;
+                        }
+                        div.layer7 {
+                            background: url(imgs/parallax-20261111T192937Z-1-001/parallax/layer_07.png) repeat-x 0;
+                            animation: 30s animLayer infinite linear;
+
+                        }
+                        div.layer6 {
+                            background: url(imgs/parallax-20261111T192937Z-1-001/parallax/layer_06.png) repeat-x 0;
+                            animation: 25s animLayer infinite linear;
+
+                        }
+                        div.layer5 {
+                            background: url(imgs/parallax-20261111T192937Z-1-001/parallax/layer_05.png) repeat-x 0;
+                            animation: 20s animLayer infinite linear;
+                        }
+                        div.layer4 {
+                            background: url(imgs/parallax-20261111T192937Z-1-001/parallax/layer_04.png) repeat-x 0;
+                            animation: 15s animLayer infinite linear;
+                        }
+                        div.layer3 {
+                            background: url(imgs/parallax-20261111T192937Z-1-001/parallax/layer_03.png) repeat-x 0;
+                            animation: 10s animLayer infinite linear;
+                        }
+                        div.layer2 {
+                            background: url(imgs/parallax-20261111T192937Z-1-001/parallax/layer_02.png) repeat-x 0;
+                            animation: 5s animLayer infinite linear;
+                        }
+                        div.layer1 {
+                            background: url(imgs/parallax-20261111T192937Z-1-001/parallax/layer_01.png) repeat-x 0;
+                            animation: 2.5s animLayer infinite linear;
+                        }
+                        div.runner {
+                            background: url(imgs/parallax-20261111T192937Z-1-001/parallax/running.gif) no-repeat center / cover;
+                            position: absolute;
+                            bottom: 7rem;
+                            left: 8rem;
+                            height: 100px;
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @keyframes animLayer {
+            100% { background-position-x: -1240px;}
+        }
+        @media (min-width: 1044px){
+            body {
+                main {
+                    width: 1044px;
+                    section {
+                        width: 1024px;
+                        div.runner {
+                            left: 30rem;
+                        }
+                    }
+                }
+            }
+        }
+    </style>
     </head>
     <body class="css">
      <nav class="goback">
@@ -18,11 +110,22 @@
         <header class="mmenu internal">
             <h1>42-Parallax</h1>
             <img src="../src/images/logo-css.png" alt="Css">
-            <h3>Description.</h3>
+            <h3>Visual technique where background content moves at a different speed than foreground content during scrolling, creating depth.</h3>
         </header>
-        <section>
-            <h3 class="subtitle">Subtitle:</h3>
-        </section>
+      <section>
+            <h3 class="subtitle">Example runner:</h3>
+           <figure class="parallax">
+                <div class="layer8"></div>
+                <div class="layer7"></div>
+                <div class="layer6"></div>
+                <div class="layer5"></div>
+                <div class="layer4"></div>
+                <div class="layer3"></div>
+                <div class="layer2 "></div>
+                <div class="layer1"></div>
+                <div class="runner"></div>
+            </figure>
+        </section>	
     </main>
     </body>
 </html>

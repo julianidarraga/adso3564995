@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>41-functions</title>
     <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        body main {
+            width: 100%;
+            section {
+                width: 80%;
+                article.simple-card {
+                    background: #fff;
+                    border-radius: 12px;
+                    corner-shape:squircle;
+                    color: #333;
+                    margin: 1rem auto;
+                    padding: 1rem;
+                    max-width: max(380px, 300px);
+
+                    h2.card-title {
+                        margin: 0;
+                        font-size: min(2rem, 0.4rem);
+                    }
+                    p.card-text {
+                        color: #333;
+                        font-size: calc8(1rem * 1.05);
+                    }
+                    button.card-button {
+                        background-color: #663399;
+                        border: none;
+                        border-radius: 12px;
+                        corner-shape: squircle;
+                        color: #fff;
+                        font-size: calc(2.8 * 0.4rem);
+                        margin: 0 auto;
+                        display: block;
+                        padding: 1rem;
+                        width: clamp(100px, 100%, 354px);
+                    }
+                }
+            }
+  
+}
+        
+    </style>
     </head>
     <body class="css">
      <nav class="goback">
@@ -18,10 +58,20 @@
         <header class="mmenu internal">
             <h1>41-Functions</h1>
             <img src="../src/images/logo-css.png" alt="Css">
-            <h3>Description.</h3>
+            <h3>Built-in CSS functional expressions (e.g., calc(), min(), max(), clamp()) that execute math operations or compute property values dynamically.
+.</h3>
         </header>
         <section>
-            <h3 class="subtitle">Subtitle:</h3>
+            <h3 class="subtitle">Math Functions</h3>
+<small>calc() | min() | max() | clamp() </small>
+            <article class="simple-card">
+  <h2 class="card-title">Join Our Community</h2>
+  <p class="card-text">
+    Get access to exclusive web development tutorials, design tips, and interactive CSS coding challenges every week.
+  </p>
+  <button class="card-button">Subscribe</button>
+</article>
+
         </section>
     </main>
     </body>
