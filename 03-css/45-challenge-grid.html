@@ -5,24 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>45-challenge-grid</title>
     <link rel="stylesheet" href="../src/css/master.css">
-    </head>
-    <body class="css">
-     <nav class="goback">
-            <a href="index.html">
-                 <svg xmlns=< xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
-                    </path>
-                </svg>
-            </a> 
-        </nav>
+    <style>
+        .imagenes {
+            display: grid;
+            grid-template-areas:
+                "uno   dos   tres"
+                "cuatro  dos   cinco"
+                "seis   seis   siete";
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 0.4rem;
+            width: min(90%, 500px);
+            margin: 2rem auto;
+        }
+
+        .imagenes .box {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 3px solid #fff;
+            border-radius: 8px;
+            font-size: 0;
+        }
+
+        .uno    { grid-area: uno;   background-image: url("imgs/descarga (2).jpg"); }
+        .dos    { grid-area: dos;   background-image: url("imgs/descarga (3).jpg"); }
+        .tres   { grid-area: tres; background-image: url("imgs/descarga (4).jpg"); }
+        .cuatro { grid-area: cuatro;  background-image: url("imgs/descarga (5).jpg"); }
+        .cinco  { grid-area: cinco;  background-image: url("imgs/descarga (6).jpg"); }
+        .seis   { grid-area: seis;   background-image: url("imgs/The Walking Dead Wallpaper 4K.jpg"); }
+        .siete  { grid-area: siete; background-image: url("imgs/Michonne - twd.jpg"); }
+
+</style>
+     <style>
+        .imagenes {
+            display: grid;
+            grid-template-areas:
+                "uno   dos   tres"
+                "cuatro  dos   cinco"
+                "seis   seis   siete";
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 0.4rem;
+            width: min(90%, 500px);
+            margin: 2rem auto;
+        }
+
+        .imagenes .box {
+            overflow: hidden;
+            border: 3px solid #fff;
+            border-radius: 8px;
+        }
+
+        .imagenes .box img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .uno    { grid-area: uno; }
+        .dos    { grid-area: dos; }
+        .tres   { grid-area: tres; }
+        .cuatro { grid-area: cuatro; }
+        .cinco  { grid-area: cinco; }
+        .seis   { grid-area: seis; }
+        .siete  { grid-area: siete; }
+    </style>
+</head>
+<body class="css">
+    <nav class="goback">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256">
+                <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+            </svg>
+        </a>
+    </nav>
+
     <main>
         <header class="mmenu internal">
             <h1>45-Challenge Grid</h1>
             <img src="../src/images/logo-css.png" alt="Css">
-            <h3>Description.</h3>
+            <h3>Irregular image gallery</h3>
         </header>
+
         <section>
-            <h3 class="subtitle">Subtitle:</h3>
+            <h3 class="subtitle">the walking dead:</h3>
+            <div class="imagenes">
+                <div class="box uno">1</div>
+                <div class="box dos">2</div>
+                <div class="box tres">3</div>
+                <div class="box cuatro">4</div>
+                <div class="box cinco">5</div>
+                <div class="box seis">6</div>
+                <div class="box siete">7</div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="subtitle">the evil Within:</h3>
+            <div class="imagenes">
+                <div class="box uno">
+                    <img src="imgs/descarga (7).jpg" alt="Imagen 1">
+                </div>
+                <div class="box dos">
+                    <img src="imgs/descarga (8).jpg" alt="Imagen 2">
+                </div>
+                <div class="box tres">
+                    <img src="imgs/Ruvik.jpg" alt="Ruvik">
+                </div>
+                <div class="box cuatro">
+                    <img src="imgs/Ruvik from The Evil Within_.jpg" alt="Ruvik from The Evil Within">
+                </div>
+                <div class="box cinco">
+                    <img src="imgs/latest (400×600).jpg" alt="Imagen 5">
+                </div>
+                <div class="box seis">
+                    <img src="imgs/Tatiana Gutierrez.jpg" alt="Tatiana Gutierrez">
+                </div>
+                <div class="box siete">
+                    <img src="imgs/descarga (9).jpg" alt="Imagen 7">
+                </div>
+            </div>
         </section>
     </main>
-    </body>
+</body>
 </html>
+
+
+
